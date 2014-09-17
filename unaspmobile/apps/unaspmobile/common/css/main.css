@@ -1,0 +1,164 @@
+body {
+	margin: 0 auto;
+}
+
+#notas,#login,#financeiro,#ramais,#header-login {
+	background-color: #022b5b;
+	margin: 0 auto;
+	border: 0px;
+}
+
+#footer-login {
+	border: 0px;
+	background-color: #dbdad8;
+	width: 100%;
+}
+
+.back-login img {
+	margin: 0 auto;
+	width: 100%;
+	height: 300px;
+}
+
+.logo,#bar,.top-login {
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+	z-index: 9999;
+	position: absolute;
+}
+
+.top-login {
+	margin: 10% auto;
+	text-align: center;
+}
+
+.top-login h5 {
+	color: #BDBDBD;
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+.part1 {
+	color: white;
+}
+
+.part2 {
+	color: #e06c05;
+	border: 0px;
+}
+
+.part1,.part2,.top-login h5  {
+	font-family: sans-serif;
+	text-shadow: 0px 3px 6px rgba(0, 0, 0, 1);
+}
+
+.logo {
+	bottom: -15px;
+}
+
+.logo img {
+	min-width: 100px;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+
+
+#content-login form,#content-login form label {
+	border-width: 0px;
+	color: white;
+}
+
+#content-login form {
+	max-width: 500px;
+	color: white;
+	margin: auto;
+}
+
+#entrar {
+	background-color: #e06c05;
+	border: 0px;
+	color: #ffffff;
+}
+
+#bar {
+	bottom: -9px;
+	position: fixed;
+}
+
+#bar a {
+	background: transparent url('../images/bar.png') center no-repeat;
+	margin: auto;
+	background-size: 90% auto;
+	border-color: transparent;
+}
+
+/* Tablet Portrait (768px) */
+@media only screen and (min-width: 321px) and (max-width: 1024px) and
+	(orientation: portrait) {
+	
+
+	#content-login {
+	margin-top: 5%;
+}
+
+	.back-login img {
+		height: 520px;
+	}
+	.logo img {
+		width: 400px;
+	}
+	#bar a {
+		width: 150px;
+		height: 150px;
+	}
+	.top-login h5 {
+	font-size:20px;
+	}
+	.part1,.part2 {
+		font-family: sans-serif;
+		font-size: 50px;
+	}
+}
+
+/* Laptop/Tablet (1024px) */
+@media only screen and (min-width: 481px) and (max-width: 1024px) and
+	(orientation: landscape) {
+		.top-login {
+	margin: 3% auto;
+	}
+	#content-login {
+	margin-top: 1%;
+}
+		.back-login img {
+		height: 360px;
+	}
+	.logo img {
+		width: 300px;
+	}
+	#bar a {
+		width: 130px;
+		height: 130px;
+	}
+	.top-login h5 {
+	font-size:20px;
+	}
+	.part1,.part2 {
+		font-family: sans-serif;
+		font-size: 40px;
+	}
+	
+}
+
+/* Phone Landscape (480px) */
+@media only screen and (min-width: 321px) and (max-width: 480px) and
+	(orientation: landscape) {
+}
+
+/* Phone Portrait (320px) */
+@media only screen and (max-width: 320px) {
+}
