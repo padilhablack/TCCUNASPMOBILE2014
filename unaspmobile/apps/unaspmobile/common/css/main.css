@@ -36,8 +36,7 @@ body {
 .top-login h5 {
 	color: #BDBDBD;
 	-webkit-margin-before: 0px;
-	-webkit-margin-after: 0px
-	-webkit-margin-start: 0px;
+	-webkit-margin-after: 0px -webkit-margin-start: 0px;
 	-webkit-margin-end: 0px;
 }
 
@@ -50,7 +49,7 @@ body {
 	border: 0px;
 }
 
-.part1,.part2,.top-login h5  {
+.part1,.part2,.top-login h5 {
 	font-family: sans-serif;
 	text-shadow: 0px 3px 6px rgba(0, 0, 0, 1);
 }
@@ -65,8 +64,6 @@ body {
 	display: block;
 	margin: 0 auto;
 }
-
-
 
 #content-login form,#content-login form label {
 	border-width: 0px;
@@ -97,15 +94,25 @@ body {
 	border-color: transparent;
 }
 
+/*Página notas*/
+#header-menu{
+	background-color: #001a36;
+	border: 0px;
+}
+
+.btn-header-menu img{
+	width:30px;height:auto;
+	
+}
+
+
+
 /* Tablet Portrait (768px) */
 @media only screen and (min-width: 321px) and (max-width: 1024px) and
 	(orientation: portrait) {
-	
-
 	#content-login {
-	margin-top: 5%;
-}
-
+		margin-top: 5%;
+	}
 	.back-login img {
 		height: 520px;
 	}
@@ -113,11 +120,11 @@ body {
 		width: 400px;
 	}
 	#bar a {
-		width: 150px;
-		height: 150px;
+		width: 100px;
+		height: 100px;
 	}
 	.top-login h5 {
-	font-size:20px;
+		font-size: 20px;
 	}
 	.part1,.part2 {
 		font-family: sans-serif;
@@ -128,13 +135,13 @@ body {
 /* Laptop/Tablet (1024px) */
 @media only screen and (min-width: 481px) and (max-width: 1024px) and
 	(orientation: landscape) {
-		.top-login {
-	margin: 3% auto;
+	.top-login {
+		margin: 3% auto;
 	}
 	#content-login {
-	margin-top: 1%;
-}
-		.back-login img {
+		margin-top: 1%;
+	}
+	.back-login img {
 		height: 360px;
 	}
 	.logo img {
@@ -145,20 +152,93 @@ body {
 		height: 130px;
 	}
 	.top-login h5 {
-	font-size:20px;
+		font-size: 20px;
 	}
 	.part1,.part2 {
 		font-family: sans-serif;
 		font-size: 40px;
 	}
-	
+}
+
+@media only screen and (width: 480px) and (width: 800px) and
+	(orientation: portrait) {
+	#content-login {
+		margin-top: 15%;
+	}
+	.back-login img {
+		height: 400px;
+	}
+	.logo img {
+		width: 300px;
+	}
+	#bar a {
+		width: 70px;
+		height: 70px;
+	}
+	.top-login h5 {
+		font-size: 25px;
+	}
+	.part1,.part2 {
+		font-family: sans-serif;
+		font-size: 50px;
+	}
 }
 
 /* Phone Landscape (480px) */
 @media only screen and (min-width: 321px) and (max-width: 480px) and
 	(orientation: landscape) {
+	.top-login {
+		margin: 3% auto;
+	}
+	#content-login {
+		margin-top: 1%;
+	}
+	.back-login img {
+		height: 210px;
+	}
+	.logo img {
+		width: 180px;
+	}
+	#bar a {
+		width: 60px;
+		height: 60px;
+	}
+	.top-login h5 {
+		font-size: 15px;
+	}
+	.part1,.part2 {
+		font-family: sans-serif;
+		font-size: 25px;
+	}
 }
 
 /* Phone Portrait (320px) */
 @media only screen and (max-width: 320px) {
+	.top-login {
+		margin: 3% auto;
+	}
+	#content-login {
+		margin-top: 1%;
+	}
+	.back-login img {
+		height: 190px;
+	}
+	.logo img {
+		width: 154px;
+	}
+	#bar a {
+		width: 60px;
+		height: 60px;
+	}
+	.top-login h5 {
+		font-size: 15px;
+	}
+	.part1,.part2 {
+		font-family: sans-serif;
+		font-size: 30px;
+	}
+	#form {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }

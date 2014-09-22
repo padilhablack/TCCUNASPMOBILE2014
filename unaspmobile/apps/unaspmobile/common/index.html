@@ -20,8 +20,8 @@
 	<div data-role="page" id="login">
 		<div data-role="header" id="header-login">
 			<div class="top-login">
-			<span class="part1">UNASP</span><span class="part2">MOBILE</span>
-			<h5>Engenheiro Coelho</h5>
+				<span class="part1">UNASP</span><span class="part2">MOBILE</span>
+				<h5>Engenheiro Coelho</h5>
 			</div>
 			<div class="back-login">
 				<img src="images/shape.png">
@@ -30,39 +30,60 @@
 				<img src="images/logo_unasp.png">
 			</div>
 		</div>
-		
+
 		<div data-role="content" id="content-login" style="padding: 15px">
 			<form id="form" action="">
 				<label for="text">Login:</label><input type="text" name="user"
 					id="user"> <label for="text">Senha:</label><input
 					type="text" name="password" id="password"> <a href="#"
-					data-role="button" id="entrar">Entrar</a>
+					data-role="button" href="#perfil" id="entrar">Entrar</a>
 			</form>
-			<div id="bar">
-				<a class="ui-content" href="#" data-role="button"
-						 data-corners="false" data-shadow="false"
-						data-iconshadow="false"
-						></a>
-			</div>
-		
+
+		</div>
+		<div id="bar">
+			<a href="#" data-role="button" data-corners="false"
+				data-shadow="false" data-iconshadow="false"></a>
 		</div>
 		<div data-role="footer" data-position="fixed" id="footer-login">
-			<h3></h3><br><h3></h3>
+			<h3>Footer</h3>
 		</div>
 	</div>
-	<div data-role="page" id="notas">
-		<div data-role="header" id="header" data-position="fixed">
-			<h3>Header</h3>
+	<div data-role="page" id="perfil">
+		<div data-role="header" id="header-menu" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#" id="perfil" class="btn-header-menu"><img src="images/icones/user.png"></a></li>
+					<li><a href="#" id="notas" class="btn-header-menu"><img src="images/icones/notas.png"></a></li>
+					<li><a href="#" id="financeiro" class="btn-header-menu"><img src="images/icones/financeiro.png"></a></li>
+					<li><a href="#" id="ramais" class="btn-header-menu"><img src="images/icones/ramal.png"></a></li>
+					<li><a href="#" id="news" class="btn-header-menu"><img src="images/icones/news.png"></a></li>
+				</ul>
+	</div>
 		</div>
 		<div data-role="content" style="padding: 15px"></div>
 		<div data-role="footer" data-position="fixed" id="footer">
 			<h3>Footer</h3>
 		</div>
 	</div>
-	<div data-role="page" id="financeiro">
-		<div data-role="header" id="header" data-position="fixed">
-			<h3>Header</h3>
+
+	<div data-role="page" id="notas">
+		<div data-role="header" id="" data-position="fixed">
+			<div id="navbar">
+				<ul>
+					<li><a href="#notas" id="item">Item</a></li>
+				</ul>
+			</div>
 		</div>
+		<div data-role="content" style="padding: 15px"></div>
+		<div data-role="footer" data-position="fixed" id="footer">
+			<h3>Footer</h3>
+		</div>
+	</div>
+
+
+
+	<div data-role="page" id="financeiro">
+		<div data-role="header" id="header" data-position="fixed"></div>
 		<div data-role="content" style="padding: 15px"></div>
 		<div data-role="footer" data-position="fixed" id="footer">
 			<h3>Footer</h3>
