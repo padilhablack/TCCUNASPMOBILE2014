@@ -2,7 +2,7 @@ body {
 	margin: 0 auto;
 }
 
-#notas,#login,#financeiro,#ramais,#header-login {
+#login,#header-login {
 	background-color: #022b5b;
 	margin: 0 auto;
 	border: 0px;
@@ -12,6 +12,8 @@ body {
 	border: 0px;
 	background-color: #dbdad8;
 	width: 100%;
+	bottom: 0px;
+	position: fixed;
 }
 
 .back-login img {
@@ -36,7 +38,7 @@ body {
 .top-login h5 {
 	color: #BDBDBD;
 	-webkit-margin-before: 0px;
-	-webkit-margin-after: 0px -webkit-margin-start: 0px;
+	-webkit-margin-after: 0px -webkit-margin-start:  0px;
 	-webkit-margin-end: 0px;
 }
 
@@ -68,6 +70,7 @@ body {
 #content-login form,#content-login form label {
 	border-width: 0px;
 	color: white;
+	position: relative;
 }
 
 #content-login form {
@@ -94,16 +97,82 @@ body {
 	border-color: transparent;
 }
 
-/*Página notas*/
-#header-menu{
+/*Páginas*/
+#header-menu {
 	background-color: #001a36;
 	border: 0px;
+	display: block;
+	position: relative;
+	z-index: 1;
+	width: 100%
 }
 
-.btn-header-menu img{
-	width:30px;height:auto;
-	
+.ui-grid-d li img {
+	width: 50px;
+	height: auto;
+	display: block;
+	margin: 0 auto;
 }
+
+.ui-header .ui-title,.ui-footer .ui-title {
+	font-size: 1em;
+	min-height: 1.1em;
+	text-align: center;
+	display: block;
+	margin: 0 7%;
+}
+
+.titulo li {
+	list-style: none;
+	float: left;
+	padding: 0 5px 5px;
+}
+
+.titulo li img {
+	width: 15px;
+}
+
+.header-pages {
+	margin-top: 11%;
+	position: fixed;
+}
+/*Perfil*/
+.content-perfil {
+	margin-top: 15%;
+}
+
+
+.indentify ul li img {
+	max-width: 6em;
+	width: 177px;
+	height: 212px; 
+	margin: 0;
+	padding-right: 30px;
+}
+
+.indentify ul li h3,.indentify ul li p{
+	padding-left: 15px;
+}
+
+.ui-listview > .ui-li-static.ui-li-has-thumb {
+min-height: 2.625em;
+padding-left: 11.25em;
+}
+.ui-listview > .ui-li-static {
+padding: 3.7em 1em;
+}
+
+.ui-listview .ui-li-has-thumb > img:first-child{
+position: absolute;
+left: 0;
+top: 0;
+max-height: 11em;
+max-width: 15em;
+}
+.option{
+	margin:30px;
+}
+
 
 
 
@@ -120,6 +189,7 @@ body {
 		width: 400px;
 	}
 	#bar a {
+		z-index: 9999;
 		width: 100px;
 		height: 100px;
 	}

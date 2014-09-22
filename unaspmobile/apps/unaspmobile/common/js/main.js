@@ -10,7 +10,16 @@ function wlCommonInit(){
 	 *    });
 	 *     
 	 */
-	
+
 	// Common initialization code goes here
+	$.get("http://www.unasp-ec.com/unaspserver/login.php?ra=86539&senha=9886", function(data) {
+		var resul = [];
+		resul  = data;
+		alert(resul.NOME);
+	});
+
+
 	
 }
+
+
