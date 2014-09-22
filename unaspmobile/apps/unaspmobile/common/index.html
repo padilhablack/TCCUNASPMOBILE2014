@@ -37,7 +37,38 @@
 			</ul>
 		</div>
 	</div>
+	<div data-role="page" id="login">
+		<div data-role="header" id="header-login" style="z-index: 9999">
+			<div class="top-login">
+				<span class="part1">UNASP</span><span class="part2">MOBILE</span>
+				<h5>Engenheiro Coelho</h5>
+			</div>
+			<div class="back-login">
+				<img src="images/shape.png">
+			</div>
+			<div class="logo">
+				<img src="images/logo_unasp.png">
+			</div>
+		</div>
 
+		<div data-role="content" id="content-login" style="padding: 15px">
+			<form id="form" action="">
+				<label for="text">Login:</label><input type="text" name="user"
+					id="user"> <label for="text">Senha:</label><input
+					type="text" name="password" id="password"> <a href="#"
+					data-role="button" id="entrar">Entrar</a>
+			</form>
+
+		</div>
+		<div id="bar">
+			<a href="#" data-role="button" data-corners="false"
+				data-shadow="false" data-iconshadow="false"></a>
+		</div>
+		<div data-role="footer" data-position="fixed" id="footer-login"
+			style="z-index: 1; width: 100%;">
+			<h3>Footer</h3>
+		</div>
+	</div>
 	<div data-role="page" id="perfil">
 		<div data-role="header" class="header-pages" data-position="fixed"
 			style="">
@@ -46,11 +77,11 @@
 				<li>Perfil</li>
 			</ul>
 		</div>
-		<div  data-role="content"class="content-perfil">
+		<div data-role="content" class="content-perfil">
 			<div class="indentify">
 				<ul data-role="listview" data-inset="true">
 					<li><img src="images/icones/user.png">
-						<h3>Jonas Padilha Rodrigues</h3>
+						<h3 id="display-name-user">Jonas Padilha Rodrigues</h3>
 						<p>jonas@agzoom.com.br</p></li>
 				</ul>
 			</div>
@@ -64,7 +95,7 @@
 					<select name="select" id="select"><option value="option">Unasp
 							Virtual</option></select>
 				</div>
-					<br>
+				<br>
 				<div class=" ui-block-a options">
 					<select name="select" id="select"><option value="option">Notificações
 						</option></select>
@@ -81,8 +112,6 @@
 				data-shadow="false" data-iconshadow="false"></a>
 		</div>
 	</div>
-
-
 
 	<div data-role="page" id="notas">
 		<div data-role="header" id="header" data-position="fixed"
@@ -143,9 +172,9 @@
 	</div>
 
 
-
-	<script src="js/initOptions.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/auth.js"></script>
+	<script src="js/initOptions.js"></script>
 	<script src="js/messages.js"></script>
 </body>
 </html>

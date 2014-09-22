@@ -1,25 +1,53 @@
+
+var path = "";// caminho padrão
+var USER;
+var RA , USUARIO;
+var busyIndicator = null;
+
 function wlCommonInit(){
-	/*
-	 * Use of WL.Client.connect() API before any connectivity to a Worklight Server is required. 
-	 * This API should be called only once, before any other WL.Client methods that communicate with the Worklight Server.
-	 * Don't forget to specify and implement onSuccess and onFailure callback functions for WL.Client.connect(), e.g:
-	 *    
-	 *    WL.Client.connect({
-	 *    		onSuccess: onConnectSuccess,
-	 *    		onFailure: onConnectFailure
-	 *    });
-	 *     
-	 */
-
-	// Common initialization code goes here
-	$.get("http://www.unasp-ec.com/unaspserver/login.php?ra=86539&senha=9886", function(data) {
-		var resul = [];
-		resul  = data;
-		alert(resul.NOME);
-	});
-
-
 	
+	verificaLogin();
+	if (WL.Client.getEnvironment() == WL.Environment.WINDOWS_PHONE_8) {
+		path = "www/default/";
+	}
+		
 }
+
+
+function verificaLogin(){
+	var invocationData = {
+			adapter : 'autenticacaoAdapter',
+			procedure : 'getUsuarioActive',
+			parameters : []
+		};
+	
+	WL.Client.invokeProcedure(invocationData,{
+		onSuccess : loadFeedsSuccess,
+		onFailure : loadFeedsFailure
+	});
+}
+
+
+function loadFeedsSuccess(result){
+
+	var Status = result.status, 
+	RA = result;
+	
+			teste = JSON.stringify(result);
+			RA = result.userId; 
+		alert(teste);
+
+		
+		USUARIO  = result.displayName;
+}
+
+function loadFeedsFailure(){
+	alert("Jonas não foi");
+}
+
+
+
+
+
 
 
