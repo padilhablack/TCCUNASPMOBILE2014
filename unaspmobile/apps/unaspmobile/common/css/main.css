@@ -22,7 +22,7 @@ body {
 	height: 300px;
 }
 
-.logo,#bar,.top-login {
+.logo,.bar,.top-login {
 	margin: 0 auto;
 	width: 100%;
 	height: auto;
@@ -85,12 +85,12 @@ body {
 	color: #ffffff;
 }
 
-#bar {
+.bar {
 	bottom: -9px;
 	position: fixed;
 }
 
-#bar a {
+.bar a {
 	background: transparent url('../images/bar.png') center no-repeat;
 	margin: auto;
 	background-size: 90% auto;
@@ -173,6 +173,11 @@ max-width: 15em;
 	margin:30px;
 }
 
+.ui-page-theme-a .ui-btn,.ui-btn:hover.bar a:hover{
+	background-color: rgba(246, 246, 246, 0) /*{a-bup-background-color}*/;
+border-color: rgba(221, 221, 221, 0) 
+}
+
 
 
 
@@ -188,7 +193,7 @@ max-width: 15em;
 	.logo img {
 		width: 400px;
 	}
-	#bar a {
+	.bar a {
 		z-index: 9999;
 		width: 100px;
 		height: 100px;
@@ -217,7 +222,7 @@ max-width: 15em;
 	.logo img {
 		width: 300px;
 	}
-	#bar a {
+	.bar a {
 		width: 130px;
 		height: 130px;
 	}
@@ -241,7 +246,7 @@ max-width: 15em;
 	.logo img {
 		width: 300px;
 	}
-	#bar a {
+	.bar a {
 		width: 70px;
 		height: 70px;
 	}
@@ -269,7 +274,7 @@ max-width: 15em;
 	.logo img {
 		width: 180px;
 	}
-	#bar a {
+	.bar a {
 		width: 60px;
 		height: 60px;
 	}
@@ -296,7 +301,7 @@ max-width: 15em;
 	.logo img {
 		width: 154px;
 	}
-	#bar a {
+	.bar a {
 		width: 60px;
 		height: 60px;
 	}

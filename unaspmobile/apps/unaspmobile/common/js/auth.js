@@ -29,10 +29,9 @@ unaspChallengeHandler.handleChallenge = function(response){
 		// se autenticacao der certo
 	} else if (authRequired == false){
 
-	teste = JSON.stringify(userSession);
-	alert(teste);
+//	teste = JSON.stringify(userSession);
+//	alert(teste);
 		
-
 		USERSESSION = {
 				NOME : userSession.displayName,
 				RA : userSession.attributes.ra,
@@ -70,20 +69,16 @@ $("#entrar").bind('click', function () {
 });
 
 //faz logout
-$(".sair").click(function(){
-	loading("show-page-loading-msg","Saindo..");
+$(".bar").click(function(){
 	WL.Client.logout('UnaspRealm', {onSuccess:function(){
-		setTimeout(function(){sair()}, 5000);
+		setTimeout(function(){
+			$.mobile.changePage("#login");
+			}, 2000);
 	}});
-	
-	function sair(){
-		$.mobile.loading( "hide" );
-		$.mobile.changePage("#login");
-		WL.Client.reloadApp();
-		
-	}
-	
+
 });
+
+
 $("#desligar").click(function(){
 	loading("show-page-loading-msg","Saindo..");
 	WL.Client.logout('UnaspRealm', {onSuccess:function(){
