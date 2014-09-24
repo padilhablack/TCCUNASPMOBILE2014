@@ -22,7 +22,7 @@
 		style="position: fixed; z-index: 9999; width: 100%; margin: 0">
 		<div class="botoes-menu">
 			<ul class="ui-grid-d ui-content">
-				<li class="ui-block-a"><a href="./security/login.html"
+				<li class="ui-block-a"><a href=""
 					data-transition="slide"><img src="images/logo_mini.png"></a></li>
 				<li class="ui-block-b"><a href="#perfil"
 					data-transition="slide" data-ajax="false"><img
@@ -55,7 +55,7 @@
 			<form id="form" action="">
 				<label for="text">Login:</label><input type="text" name="user"
 					id="user"> <label for="text">Senha:</label><input
-					type="text" name="password" id="password"> <a href="#"
+					type="password" name="password" id="password"> <a href="#"
 					data-role="button" id="entrar">Entrar</a>
 			</form>
 
@@ -81,8 +81,8 @@
 			<div class="indentify">
 				<ul data-role="listview" data-inset="true">
 					<li><img src="images/icones/user.png">
-						<h3 id="display-name-user">Jonas Padilha Rodrigues</h3>
-						<p>jonas@agzoom.com.br</p></li>
+						<h3 id="display-name-user"></h3>
+						<p id="display-email-user"></p></li>
 				</ul>
 			</div>
 			<div class="ui-grid-solo options" style="max-width: 400px;">
@@ -173,6 +173,7 @@
 
 
 	<script src="js/main.js"></script>
+	<script src="js/functions.js"></script>
 	<script src="js/auth.js"></script>
 	<script src="js/initOptions.js"></script>
 	<script src="js/messages.js"></script>

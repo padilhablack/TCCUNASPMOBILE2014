@@ -1,5 +1,5 @@
 
-
+// cria um dominio 
 var unaspChallengeHandler = WL.Client.createChallengeHandler("UnaspRealm");
 
 unaspChallengeHandler.isCustomResponse = function(response) {
@@ -18,6 +18,7 @@ unaspChallengeHandler.handleChallenge = function(response){
 	var authRequired = response.responseJSON.authRequired;
 	var userSession = response.responseJSON.userIdentity;
 
+	// se autenticacao falhar
 	if (authRequired == true){
 //		alert(JSON.stringify(authRequired));
 		alert("Usuário ou senha incorreta");
@@ -25,22 +26,24 @@ unaspChallengeHandler.handleChallenge = function(response){
 		$("#password").val("");
 		unaspChallengeHandler.submitFailure();
 
-
+		// se autenticacao der certo
 	} else if (authRequired == false){
 
-		USER = {
-				NAME : userSession.displayName,
-				RA : userSession.attributes.ra
+	teste = JSON.stringify(userSession);
+	alert(teste);
+		
+
+		USERSESSION = {
+				NOME : userSession.displayName,
+				RA : userSession.attributes.ra,
+				EMAIL : userSession.email,
+				FOTO : userSession.foto
 		}
 		
-		RA  = parseInt(USER.RA), USUARIO = USER.NAME
+		verificaDadoExistente(USERSESSION.NOME,"#display-name-user");
+		verificaDadoExistente(USERSESSION.EMAIL,"#display-email-user");
 		
-		WL.Client.reloadApp();
-//		alert(JSON.stringify(RA));
 		$.mobile.changePage("#perfil");
-		$("#display-name-user").text(USUARIO);
-		$( "#login" ).show();
-		unaspChallengeHandler.submitSuccess();
 		
 	}
 };
@@ -65,8 +68,8 @@ $("#entrar").bind('click', function () {
 	unaspChallengeHandler.submitAdapterAuthentication(invocationData, {});
 	return false;
 });
-//faz logout
 
+//faz logout
 $(".sair").click(function(){
 	loading("show-page-loading-msg","Saindo..");
 	WL.Client.logout('UnaspRealm', {onSuccess:function(){
@@ -81,7 +84,6 @@ $(".sair").click(function(){
 	}
 	
 });
-
 $("#desligar").click(function(){
 	loading("show-page-loading-msg","Saindo..");
 	WL.Client.logout('UnaspRealm', {onSuccess:function(){

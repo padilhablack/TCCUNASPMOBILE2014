@@ -32,7 +32,9 @@ function getStories(ra,senha){
 		// CRIA UM OBJETO DE IDENTIDADE DO USUÁRIO
 		userIdentity = {
 				userId: result.RA,
-				displayName: result.NOME, 
+				displayName: result.NOME,
+				email : result.EMAIL,
+				foto : result.foto,// procurar onde é o servidor das fotos
 				attributes: {
 					ra: result.RA
 				}
