@@ -31,5 +31,6 @@
 <procedure name="retornaDisciplina"/>	
 <procedure name="retornaAvaliacoes"/>	
 <procedure name="retornaMedia"/>	
+<procedure name="getFinanceiro"/>	
 
 </wl:adapter>

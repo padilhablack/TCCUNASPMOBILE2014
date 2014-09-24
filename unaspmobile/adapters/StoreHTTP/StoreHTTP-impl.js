@@ -63,7 +63,6 @@ function retornaAvaliacoes(ra,curso,ano,periodo,turma){
 }
 
 
-
 function retornaMedia(ra,ano,turma,periodo,disciplina){
 	// CHAMA A PROCEDURE
 	var input = {
@@ -74,3 +73,16 @@ function retornaMedia(ra,ano,turma,periodo,disciplina){
 		
 	return WL.Server.invokeHttp(input);
 }
+
+function getFinanceiro(ra){
+	// CHAMA A PROCEDURE
+	var input = {
+		    method : 'get',
+		    returnedContentType : 'json',
+		    path : '/unaspserver/financeiro/getFinanceiro.php?ra='+ra
+		};
+		
+	return WL.Server.invokeHttp(input);
+}
+
+
