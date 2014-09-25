@@ -41,8 +41,10 @@ unaspChallengeHandler.handleChallenge = function(response){
 		
 		verificaDadoExistente(USERSESSION.NOME,"#display-name-user");
 		verificaDadoExistente(USERSESSION.EMAIL,"#display-email-user");
-		
+		loadCurso(USERSESSION.RA);
+		$("#header-menu").show();
 		$.mobile.changePage("#perfil");
+		
 		
 	}
 };
@@ -73,8 +75,13 @@ $(".bar").click(function(){
 	WL.Client.logout('UnaspRealm', {onSuccess:function(){
 		setTimeout(function(){
 			$.mobile.changePage("#login");
+			$("#header-menu").hide();
 			}, 2000);
 	}});
+	$('#cursos-matriculados ul').html("");
+	$("#user").val("");
+	$("#password").val("");
+
 
 });
 

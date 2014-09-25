@@ -5,7 +5,7 @@
  *  disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
  */
 
-function retornaCurso(ra,senha){
+function retornaCurso(ra){
 	// CHAMA A PROCEDURE
 	var input = {
 		    method : 'get',

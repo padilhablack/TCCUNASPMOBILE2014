@@ -9,23 +9,29 @@
 /** PROCEDIMENTO PARA CARREGAR O CURSO**/ 
 function loadCurso(ra){
 	
-	executaProcedure([ra], 'mysqlAdapter', 'retornaCurso', loadCursoSuccess, loadFailure);
+	executaProcedure([ra], 'StoreHTTP', 'retornaCurso', loadCursoSuccess, loadFailure);
 }
 
 function loadCursoSuccess(result){
-	if (result.invocationResult.resultSet.length > 0) {
-		displayCurso(result.invocationResult.resultSet);
+	if (result.invocationResult.array.length > 0) {
+		displayCurso(result.invocationResult.array);
 	}else 
 		loadFailure();	 
+//	teste = JSON.stringify(result.invocationResult.array);
+//	alert(teste);
 }
 
 function displayCurso(items){
-	var selectCurso = $('#curso');  		
+	var selectCurso = $('#cursos-matriculados ul');		
 	for (var i = 0; i < items.length; i++) {
-		var li = $('<option/>').html(items[i].nome).val(items[i].idCurso);
+		var li = $('<li/>').html(items[i].nome_curso).val(items[i].id_curso);
 		selectCurso.append(li);
 	}
 }
+
+
+
+
 /** FIM  PROCEDIMENTO CURSO **/ 
 
 
