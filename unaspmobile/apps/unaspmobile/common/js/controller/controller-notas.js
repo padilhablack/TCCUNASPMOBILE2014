@@ -9,27 +9,25 @@
 /** PROCEDIMENTO PARA CARREGAR O CURSO**/ 
 function loadCurso(ra){
 	
-	executaProcedure([ra], 'StoreHTTP', 'retornaCurso', loadCursoSuccess, loadFailure);
+//	executaProcedure([ra], 'StoreHTTP', 'retornaCurso', loadCursoSuccess, loadFailure);
+//}
+//
+//function loadCursoSuccess(result){
+//	if (result.invocationResult.array.length > 0) {
+//		displayCurso(result.invocationResult.array);
+//	}else 
+//		loadFailure();	 
+////	teste = JSON.stringify(result.invocationResult.array);
+////	alert(teste);
+//}
+//
+//function displayCurso(items){
+//	var selectCurso = $('#cursos-matriculados ul');		
+//	for (var i = 0; i < items.length; i++) {
+//		var li = $('<li/>').html(items[i].nome_curso).val(items[i].id_curso);
+//		selectCurso.append(li);
+//	}
 }
-
-function loadCursoSuccess(result){
-	if (result.invocationResult.array.length > 0) {
-		displayCurso(result.invocationResult.array);
-	}else 
-		loadFailure();	 
-//	teste = JSON.stringify(result.invocationResult.array);
-//	alert(teste);
-}
-
-function displayCurso(items){
-	var selectCurso = $('#cursos-matriculados ul');		
-	for (var i = 0; i < items.length; i++) {
-		var li = $('<li/>').html(items[i].nome_curso).val(items[i].id_curso);
-		selectCurso.append(li);
-	}
-}
-
-
 
 
 /** FIM  PROCEDIMENTO CURSO **/ 
@@ -55,7 +53,6 @@ function displayTurma(items){
 		$('#turma select option:eq(1)').remove();
 		selectTurma.append(li);
 	}
-
 }
 /** FIM PROCEDIMENTO TURMA**/ 
 

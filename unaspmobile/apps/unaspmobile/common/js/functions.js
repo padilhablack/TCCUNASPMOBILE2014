@@ -23,4 +23,12 @@ function executaProcedure(pametros, adapter, procedure, sucess, failure){
 
 }
 
+function resposive(){
+	// fixa o o titulo do header abaixo de header total
+	var valor = $("#header-menu").height();
+	var valorContent = valor + $('.header-pages').height();
+	$('.header-pages').css('margin-top',valor);
+	$('.content-unaspmobile').css('margin-top',valorContent);
+}
+
 

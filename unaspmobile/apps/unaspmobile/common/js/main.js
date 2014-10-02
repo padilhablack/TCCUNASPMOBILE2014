@@ -9,7 +9,7 @@ var busyIndicator = null; // icone de loading;
 function wlCommonInit(){
 
 	verificaLogin();
-
+	resposive();
 	
 	if (WL.Client.getEnvironment() == WL.Environment.WINDOWS_PHONE_8) {
 		path = "www/default/";
@@ -51,7 +51,7 @@ function sucess(result){
 		verificaDadoExistente(USERSESSION.NOME,"#display-name-user");
 		verificaDadoExistente(USERSESSION.EMAIL,"#display-email-user");
 		// carrega os cursos
-		loadCurso(USERSESSION.RA);
+		loadPerfil(USERSESSION.RA);
 		
 //		$("#display-name-user").text(USERSESSION.NOME);
 //		$("#display-email-user").text(USERSESSION.EMAIL);
@@ -59,6 +59,7 @@ function sucess(result){
 		// carrega todos os módulos necessários 
 
 		$.mobile.changePage("#perfil");
+		$("#header-menu").hide();
 	}else{
 		failure(); // função de erro
 	}
@@ -70,6 +71,7 @@ function sucess(result){
 
 function failure(){
 	// colocar mensagem de alerta de conexão falhou!
+	$("#header-menu").show();
 	$.mobile.changePage("#login");
 }
 

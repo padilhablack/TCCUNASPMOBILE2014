@@ -25,6 +25,7 @@ unaspChallengeHandler.handleChallenge = function(response){
 		$("#user").val("");
 		$("#password").val("");
 		unaspChallengeHandler.submitFailure();
+		$("#header-menu").hide();
 
 		// se autenticacao der certo
 	} else if (authRequired == false){
@@ -41,11 +42,9 @@ unaspChallengeHandler.handleChallenge = function(response){
 		
 		verificaDadoExistente(USERSESSION.NOME,"#display-name-user");
 		verificaDadoExistente(USERSESSION.EMAIL,"#display-email-user");
-		loadCurso(USERSESSION.RA);
+		loadPerfil(USERSESSION.RA);
 		$("#header-menu").show();
 		$.mobile.changePage("#perfil");
-		
-		
 	}
 };
 

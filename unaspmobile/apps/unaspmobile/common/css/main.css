@@ -133,12 +133,9 @@ body {
 }
 
 .header-pages {
-	margin-top: 11%;
-	position: fixed;
 }
 /*Perfil*/
-.content-perfil {
-	margin-top: 15%;
+.content-unaspmobile {
 }
 
 
@@ -173,12 +170,20 @@ max-width: 15em;
 	margin:30px;
 }
 
-.ui-page-theme-a .ui-btn,.ui-btn:hover.bar a:hover{
-	background-color: rgba(246, 246, 246, 0) /*{a-bup-background-color}*/;
-border-color: rgba(221, 221, 221, 0) 
+.ui-page-theme-a .ui-btn:hover, html .ui-bar-a .ui-btn:hover, html .ui-body-a .ui-btn:hover, html body .ui-group-theme-a .ui-btn:hover, html head + body .ui-btn.ui-btn-a:hover {
+background-color: rgba(237, 237, 237, 0) /*{a-bhover-background-color}*/;
+border-color: rgba(221, 221, 221, 0) /*{a-bhover-border}*/;
+}
+.ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head + body .ui-btn.ui-btn-a {
+background-color: rgba(237, 237, 237, 0) /*{a-bhover-background-color}*/;
+border-color: rgba(221, 221, 221, 0) /*{a-bhover-border}*/;
 }
 
-
+.notas-lista-cursos li{
+	
+	float:left;
+	padding:12px;
+}
 
 
 /* Tablet Portrait (768px) */
