@@ -6,36 +6,10 @@
  * */
 
 
-/** PROCEDIMENTO PARA CARREGAR O CURSO**/ 
-function loadCurso(ra){
-	
-//	executaProcedure([ra], 'StoreHTTP', 'retornaCurso', loadCursoSuccess, loadFailure);
-//}
-//
-//function loadCursoSuccess(result){
-//	if (result.invocationResult.array.length > 0) {
-//		displayCurso(result.invocationResult.array);
-//	}else 
-//		loadFailure();	 
-////	teste = JSON.stringify(result.invocationResult.array);
-////	alert(teste);
-//}
-//
-//function displayCurso(items){
-//	var selectCurso = $('#cursos-matriculados ul');		
-//	for (var i = 0; i < items.length; i++) {
-//		var li = $('<li/>').html(items[i].nome_curso).val(items[i].id_curso);
-//		selectCurso.append(li);
-//	}
-}
-
-
-/** FIM  PROCEDIMENTO CURSO **/ 
-
-
 /** PROCEDIMENTO PARA CARREGAR TURMA**/ 
+
 function loadTurma(ra,curso){
-	executaProcedure([ra,curso], 'mysqlAdapter', 'retornaTurma', loadTurmaSuccess, loadFailure);
+	executaProcedure([ra,curso], 'StoreHTTP', 'retornaTurma', loadTurmaSuccess, loadFailure);
 }
 //função de sucesso
 function loadTurmaSuccess(result){
@@ -49,7 +23,7 @@ function loadTurmaSuccess(result){
 function displayTurma(items){
 	var selectTurma = $('#turma select');   
 	for (var i = 0; i < items.length; i++) {
-		var li = $('<option/>').html(items[i].nome).val(items[i].idTurma);
+		var li = $('<option/>').html(items[i].descricao).val(items[i].id_turma);
 		$('#turma select option:eq(1)').remove();
 		selectTurma.append(li);
 	}
@@ -72,7 +46,7 @@ function loadPeriodoSuccess(result){
 function displayPeriodo(items){
 	var selectPeriodo = $('#periodo select');   
 	for (var i = 0; i < items.length; i++) {
-		var li = $('<option/>').html(items[i].nome).val(items[i].idPeriodo);
+		var li = $('<option/>').html(items[i].nome_periodo).val(items[i].id_periodo);
 		$('#periodo select option:eq(1)').remove();
 		selectPeriodo.append(li);
 	}
@@ -82,7 +56,7 @@ function displayPeriodo(items){
 /** PROCEDIMENTO PARA CARREGAR DISCIPLINA**/ 
 function loadDisciplina(ra,curso,turma,periodo){
 
-	executaProcedure([ra,curso,turma,periodo], 'mysqlAdapter', 'retornaDisciplina', loadDiscilinaSuccess, loadFailure);
+	executaProcedure([ra,curso,turma,periodo], 'StoreHTTP', 'retornaDisciplina', loadDiscilinaSuccess, loadFailure);
 }
 
 function loadDiscilinaSuccess(result){
@@ -96,7 +70,7 @@ function loadDiscilinaSuccess(result){
 function displayDisciplina(items){
 	var selectDisciplina = $('#disciplina select');   
 	for (var i = 0; i < items.length; i++) {
-		var li = $('<option/>').html(items[i].nome).val(items[i].idDisciplina);
+		var li = $('<option/>').html(items[i].nome_disciplina).val(items[i].id_disciplina);
 		$('#disciplina select option:eq(1)').remove();
 		selectDisciplina.append(li);
 	}
@@ -104,10 +78,12 @@ function displayDisciplina(items){
 /** FIM PROCEDIMENTO DISCIPLINA**/ 
 
 
+
+
 /** PROCEDIMENTO PARA CARREGAR NOTAS*/ 
 function loadNotas(ra,curso,turma,periodo,disciplina,mostra){
 
-	executaProcedure( [ra,curso,turma,periodo,disciplina], 'mysqlAdapter', 'retornaNotas', loadNotasSuccess, loadFailure);
+	executaProcedure( [ra,curso,turma,periodo,disciplina], 'StoreHTTP', 'retornaNotas', loadNotasSuccess, loadFailure);
 }
 //função de sucesso
 function loadNotasSuccess(result){
@@ -212,7 +188,7 @@ function displayNotas(items){
 /** PROCEDIMENTO PARA CARREGAR AULAS**/ 
 function loadAulas(ra,curso,turma,periodo,dsciplina){
 	
-	executaProcedure([ra,curso,turma,periodo,dsciplina],  'mysqlAdapter', 'retornaAulas', loadAulasSuccess, loadFailure);
+	executaProcedure([ra,curso,turma,periodo,dsciplina],  'StoreHTTP', 'retornaAulas', loadAulasSuccess, loadFailure);
 }
 
 //função de sucesso

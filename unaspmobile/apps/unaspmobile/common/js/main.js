@@ -10,11 +10,11 @@ function wlCommonInit(){
 
 	verificaLogin();
 	resposive();
-	
+	ini_options_notas();
+
 	if (WL.Client.getEnvironment() == WL.Environment.WINDOWS_PHONE_8) {
 		path = "www/default/";
 	}
-
 }
 //função que verfica o login
 function verificaLogin(){

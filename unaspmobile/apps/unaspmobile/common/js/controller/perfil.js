@@ -3,8 +3,11 @@ function loadPerfil(ra){
 }
 
 function perfilSuccess(result){
-	if (result.invocationResult.array.length > 0) {
-		displayCurso(result.invocationResult.array);
+	
+	var auxResult = result.invocationResult.array;
+	if (auxResult.length > 0) {
+		displayCurso(auxResult);
+		displayCursoOption(auxResult);
 	}else 
 		perfilFailure();	 
 //	teste = JSON.stringify(result.invocationResult.array);
@@ -18,6 +21,18 @@ function displayCurso(items){
 		selectCurso.append(li);
 	}
 }
+
+function displayCursoOption(items){
+	var selectCurso = $('#curso');		
+	for (var i = 0; i < items.length; i++) {
+		var li = $('<option/>').html(items[i].nome_curso).val(items[i].id_curso);
+		selectCurso.append(li);
+	}
+}
+
+
+
+
 
 function perfilFailure(result){
 	WL.Logger.error("falha ao receber os dados ");
