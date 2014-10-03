@@ -5,33 +5,30 @@
  * */
 
 
-var CURSO = "", TURMA = "", PERIODO = "" , DISCIPLINA = ""; // variaveis globais 
+var CURSO = "", ANO = "", TURMA = "", PERIODO = "" , DISCIPLINA = ""; // variaveis globais 
 
-	desabilita("#turma");
-	desabilita("#periodo");
-	desabilita("#disciplina");
-	desabilita("#navbar0");
-
-$(document.ready(function(){
 	$("#curso").change(function(){
-		$( "#curso option:selected" ).each(function() {
-			if(!$("#conteudo").is(":empty")){
-				desabilita("#turma");
-				desabilita("#periodo");
-				desabilita("#disciplina");
-				desabilita("#navbar0");
-				$("#conteudo").empty();
-			}
-			
-			CURSO = $( this ).val() + " ";
-			loadTurma(USERSESSION.RA,CURSO);
-			habilita("#turma");
-			
-			alert(CURSO);
+			CURSO = parseInt($( this ).val());
+//			alert(CURSO);
+//			alert(USERSESSION.RA);
+			loadPeriodo(USERSESSION.RA,CURSO);
+			return false;
+	});
+	
+	
+	$("#periodo").change(function(){
+		$( "#periodo option:selected").each(function() {
+			PERIODO = $( this ).val();
+			 ANO = $( this ).attr('ano');
+			 loadTurma(USERSESSION.RA,CURSO,ANO,PERIODO);
+//			alert(ANO);
+//			alert(PERIODO);
 		});
 		return false;
 	});
-
+	
+	
+	
 	$("#turma").change(function(){
 		$( "#turma option:selected" ).each(function() {
 			TURMA = $( this ).val() + " ";
@@ -41,14 +38,7 @@ $(document.ready(function(){
 		return false;
 	});
 
-	$("#periodo").change(function(){
-		$( "#periodo option:selected" ).each(function() {
-			PERIODO = $( this ).val();
-			loadDisciplina(USERSESSION.RA,CURSO,TURMA,PERIODO);
-			habilita("#disciplina");
-		});
-		return false;
-	});
+
 
 	$("#disciplina").change(function(){
 		$( "#disciplina option:selected" ).each(function() {
@@ -65,4 +55,3 @@ $(document.ready(function(){
 	$("#faltas-menu").click(function(){
 		loadAulas(RA,CURSO,TURMA,PERIODO,DISCIPLINA);
 	});
-}));
