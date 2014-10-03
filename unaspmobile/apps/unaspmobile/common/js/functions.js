@@ -27,8 +27,11 @@ function resposive(){
 	// fixa o o titulo do header abaixo de header total
 	var valor = $("#header-menu").height();
 	var valor2 = $('.header-pages').height();
+	var valorTotal = valor * 2 - 83;
+	var valorfooter = $('#footer-fixed').height();
 	$('.header-pages').css('margin-top',valor);
-	$('.content-unaspmobile').css('margin-top',valor2);
+	$('.content-unaspmobile ').css('margin-top',valorTotal);
+	
 }
 
 

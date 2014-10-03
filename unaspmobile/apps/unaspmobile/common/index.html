@@ -42,9 +42,10 @@
 	<!-- footer fixo -->
 	<div data-role="footer" data-position="fixed" id="footer-fixed"
 		class="header-pages">
-		<h6 style="color:transparent">dfgdfg</h6>
+		<h6 style="color: transparent">dfgdfg</h6>
 		<div class="bar">
-			<a href="#" data-role="button" id="button"><img src="images/bar.png"></a>
+			<a href="#" data-role="button" id="button"><img
+				src="images/bar.png"></a>
 		</div>
 	</div>
 	<!-- /footer fixo -->
@@ -67,8 +68,8 @@
 			<form id="form" action="">
 				<label for="text">Login:</label><input type="text" name="user"
 					id="user"> <label for="text">Senha:</label><input
-					type="password" name="password" id="password"> <a
-					href="#" data-role="button" id="entrar">Entrar</a>
+					type="password" name="password" id="password"> <a href="#"
+					data-role="button" id="entrar">Entrar</a>
 			</form>
 		</div>
 	</div>
@@ -137,11 +138,55 @@
 		</div>
 		<div data-role="content" class="content-unaspmobile"
 			style="padding: 15px">
+			<div class="seleciona_curso" style="margin: 0; position: relative;">
+				<div class="ui-grid-a">
+				<div class="ui-block-a" id='id'>
+					<select id="curso" class="opcoes-notas">
+						<option selected value=''>Curso:</option>
+					</select>
+				</div>
+				<div id="turma" class="ui-block-b">
+					<select class="opcoes-notas">
+						<option value=''>Turma:</option>
+					</select>
+				</div>
+				<div id="periodo" class="ui-block-a">
+					<select class="opcoes-notas">
+						<option selected>Periodo:</option>
+					</select>
+				</div>
+				<div id="disciplina" class="ui-block-b">
+					<select class="opcoes-notas">
+						<option selected>Disciplina:</option>
+					</select>
+				</div>
+			</div>
 
-			<select name="select" id="select"
-				style="background-color: #dbdad8; color: #8b8a89">
-				<option value="option">Cursos Matriculados</option>
-			</select>
+
+
+			</div>
+			<div class="cabecalho_cursos">
+				<table style="width: 100%; padding: 5px;" class='ui-responsive'>
+					<tr style="color: #676665">
+						<td width="60%"><h1>Sistemas Para Internet</h1></td>
+						<td width="20%" style="text-align: center"><h3>Média</h3></td>
+						<td width="20%" style="text-align: center"><h3>Faltas</h3></td>
+					</tr>
+
+				</table>
+			</div>
+			<div class="mostra_detalhes_curso"
+				style="margin: 0 auto; position: relative;">
+				<table style="width: 100%; padding: 5px;" class='ui-responsive'>
+					<tr>
+						<td class="campo_nota_titulo">Algoritimo</td>
+						<td class="campo_nota">10,0</td>
+						<td class="campo_nota">5</td>
+					</tr>
+
+				</table>
+
+			</div>
 
 		</div>
 	</div>

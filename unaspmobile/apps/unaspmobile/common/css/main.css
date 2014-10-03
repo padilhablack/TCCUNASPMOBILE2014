@@ -138,7 +138,6 @@ body {
 }
 /*Perfil*/
 .content-unaspmobile {
-	margin-top:2%;
 }
 
 
@@ -214,6 +213,28 @@ height: 140px;
 		font-size: 50px;
 	}
 }
+
+.mostra_detalhes_curso{
+width:99%;
+height:100%;
+}
+
+.mostra_detalhes_curso ul li{
+	list-style:none; 
+	float:left;
+}
+
+.campo_nota{
+	background-color:#dbdad8; text-align: center; border-radius:5px;
+	width: 20%;
+	
+}
+
+.campo_nota_titulo{
+	width: 60%;
+	text-align: left;
+}
+
 
 /* Laptop/Tablet (1024px) */
 @media only screen and (min-width: 481px) and (max-width: 1024px) and
