@@ -18,6 +18,7 @@
 <script src="jqueryMobile/jquery.mobile-git.js"></script>
 </head>
 <body style="display: none;">
+	<!-- header fixo -->
 	<div data-role="header" id="header-menu" data-position="fixed"
 		data-fullscreen="true"
 		style="position: fixed; z-index: 9999; width: 100%; margin: 0">
@@ -36,6 +37,19 @@
 			</ul>
 		</div>
 	</div>
+	<!-- /header fixo -->
+
+	<!-- footer fixo -->
+	<div data-role="footer" data-position="fixed" id="footer-fixed"
+		class="header-pages">
+		<h6 style="color:transparent">dfgdfg</h6>
+		<div class="bar">
+			<a href="#" data-role="button" id="button"><img src="images/bar.png"></a>
+		</div>
+	</div>
+	<!-- /footer fixo -->
+
+	<!-- LOGIN -->
 	<div data-role="page" id="login">
 		<div data-role="header" id="header-login" style="z-index: 9999">
 			<div class="top-login">
@@ -49,26 +63,18 @@
 				<img src="images/logo_unasp.png">
 			</div>
 		</div>
-
 		<div data-role="content" id="content-login" style="padding: 15px">
 			<form id="form" action="">
 				<label for="text">Login:</label><input type="text" name="user"
 					id="user"> <label for="text">Senha:</label><input
 					type="password" name="password" id="password"> <a
-					href="#notas" data-role="button" id="entrar">Entrar</a>
+					href="#" data-role="button" id="entrar">Entrar</a>
 			</form>
-
 		</div>
-		<div data-role="footer" data-position="fixed" id="footer-login"
-			class="header-pages">
-			<h3>Footer</h3>
-		</div>
-		<div class="bar" style="position: fixed;">
-			<a href="#" data-role="button" data-corners="false"
-				data-shadow="false" data-iconshadow="false"></a>
-		</div>
-
 	</div>
+	<!-- /LOGIN -->
+
+	<!-- PERFIL -->
 	<div data-role="page" id="perfil">
 		<div data-role="header" class="header-pages" data-position="fixed"
 			style="">
@@ -116,18 +122,11 @@
 					</div>
 				</div>
 			</div>
-
-		</div>
-		<div data-role="footer" data-position="fixed" id="footer-login"
-			class="header-pages">
-			<h3>Footer</h3>
-		</div>
-		<div class="bar" style="position: fixed;">
-			<a href="#" data-role="button" data-corners="false"
-				data-shadow="false" data-iconshadow="false"></a>
 		</div>
 	</div>
+	<!-- /PERFIL -->
 
+	<!-- NOTAS -->
 	<div data-role="page" id="notas">
 		<div data-role="header" id="header" data-position="fixed"
 			class="header-pages">
@@ -138,23 +137,18 @@
 		</div>
 		<div data-role="content" class="content-unaspmobile"
 			style="padding: 15px">
-		
-			<select name="select" id="select" style="background-color: #dbdad8; color:#8b8a89">
-			<option value="option">Cursos Matriculados</option>
+
+			<select name="select" id="select"
+				style="background-color: #dbdad8; color: #8b8a89">
+				<option value="option">Cursos Matriculados</option>
 			</select>
 
 		</div>
-		<div data-role="footer" data-position="fixed" id="footer-login"
-			class="header-pages">
-			<h3>Footer</h3>
-		</div>
-		<div class="bar" style="position: fixed;">
-			<a href="#" data-role="button" data-corners="false"
-				data-shadow="false" data-iconshadow="false"></a>
-		</div>
 	</div>
+	<!-- /NOTAS -->
 
 
+	<!-- FINANCEIRO -->
 	<div data-role="page" id="financeiro">
 		<div data-role="header" id="header" data-position="fixed"
 			class="header-pages">
@@ -165,16 +159,10 @@
 		</div>
 		<div data-role="content" class="content-unaspmobile"
 			style="padding: 15px"></div>
-		<div data-role="footer" data-position="fixed" id="footer-login"
-			class="header-pages">
-			<h3>Footer</h3>
-		</div>
-		<div class="bar" style="position: fixed;">
-			<a href="#" data-role="button" data-corners="false"
-				data-shadow="false" data-iconshadow="false"></a>
-		</div>
 	</div>
+	<!--/FINANCEIRO-->
 
+	<!-- RAMAIS -->
 	<div data-role="page" id="ramais">
 		<div data-role="header" id="header" data-position="fixed"
 			class="header-pages">
@@ -185,15 +173,11 @@
 		</div>
 		<div data-role="content" class="content-unaspmobile"
 			style="padding: 15px"></div>
-		<div data-role="footer" data-position="fixed" id="footer-login"
-			class="header-pages">
-			<h3>Footer</h3>
-		</div>
-		<div class="bar" style="position: fixed;">
-			<a href="#" data-role="button" data-corners="false"
-				data-shadow="false" data-iconshadow="false"></a>
-		</div>
 	</div>
+	<!-- /RAMAIS -->
+
+
+
 	<script src="js/main.js"></script>
 	<script src="js/functions.js"></script>
 	<script src="js/controller/perfil.js"></script>

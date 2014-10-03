@@ -8,12 +8,14 @@ body {
 	border: 0px;
 }
 
-#footer-login {
+#footer-fixed {
+	text-align:center;
 	border: 0px;
 	background-color: #dbdad8;
 	width: 100%;
-	bottom: 0px;
+	bottom: 0;
 	position: fixed;
+	z-index:9999;
 }
 
 .back-login img {
@@ -87,14 +89,14 @@ body {
 
 .bar {
 	bottom: -9px;
-	position: fixed;
+	position: absolute;
 }
 
 .bar a {
-	background: transparent url('../images/bar.png') center no-repeat;
+	background: transparent;
 	margin: auto;
-	background-size: 90% auto;
 	border-color: transparent;
+	margin: 0 auto;
 }
 
 /*Páginas*/
@@ -136,6 +138,7 @@ body {
 }
 /*Perfil*/
 .content-unaspmobile {
+	margin-top:2%;
 }
 
 
@@ -198,10 +201,10 @@ border-color: rgba(221, 221, 221, 0) /*{a-bhover-border}*/;
 	.logo img {
 		width: 400px;
 	}
-	.bar a {
+	.bar a img {
 		z-index: 9999;
-		width: 100px;
-		height: 100px;
+	width: 140px;
+height: 140px;
 	}
 	.top-login h5 {
 		font-size: 20px;
@@ -227,7 +230,7 @@ border-color: rgba(221, 221, 221, 0) /*{a-bhover-border}*/;
 	.logo img {
 		width: 300px;
 	}
-	.bar a {
+	.bar a img {
 		width: 130px;
 		height: 130px;
 	}
@@ -251,7 +254,7 @@ border-color: rgba(221, 221, 221, 0) /*{a-bhover-border}*/;
 	.logo img {
 		width: 300px;
 	}
-	.bar a {
+	.bar a img{
 		width: 70px;
 		height: 70px;
 	}
@@ -279,7 +282,7 @@ border-color: rgba(221, 221, 221, 0) /*{a-bhover-border}*/;
 	.logo img {
 		width: 180px;
 	}
-	.bar a {
+	. {
 		width: 60px;
 		height: 60px;
 	}
@@ -306,7 +309,7 @@ border-color: rgba(221, 221, 221, 0) /*{a-bhover-border}*/;
 	.logo img {
 		width: 154px;
 	}
-	.bar a {
+	.bar a img{
 		width: 60px;
 		height: 60px;
 	}

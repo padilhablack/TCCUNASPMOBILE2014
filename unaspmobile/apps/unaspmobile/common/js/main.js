@@ -16,7 +16,6 @@ function wlCommonInit(){
 	}
 
 }
-
 //função que verfica o login
 function verificaLogin(){
 	var invocationData = { // parametros para execução da função no adapter
@@ -59,7 +58,7 @@ function sucess(result){
 		// carrega todos os módulos necessários 
 
 		$.mobile.changePage("#perfil");
-		$("#header-menu").hide();
+		$("#header-menu").show();
 	}else{
 		failure(); // função de erro
 	}
@@ -71,7 +70,7 @@ function sucess(result){
 
 function failure(){
 	// colocar mensagem de alerta de conexão falhou!
-	$("#header-menu").show();
+	$("#header-menu").hide();
 	$.mobile.changePage("#login");
 }
 
