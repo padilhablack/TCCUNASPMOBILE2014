@@ -31,9 +31,6 @@ function displayCursoOption(items){
 }
 
 
-
-
-
 function perfilFailure(result){
 	WL.Logger.error("falha ao receber os dados ");
 	WL.SimpleDialog.show("Falha ao Carregar aluno", 

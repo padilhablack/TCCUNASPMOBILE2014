@@ -31,22 +31,19 @@ var CURSO = "", ANO = "", TURMA = "", PERIODO = "" , DISCIPLINA = ""; // variave
 	
 	$("#turma").change(function(){
 		$( "#turma option:selected" ).each(function() {
-			TURMA = $( this ).val() + " ";
-			loadPeriodo(USERSESSION.RA,CURSO,TURMA);
-			habilita("#periodo");
+			TURMA = $( this ).val();
+			loadDisciplina(USERSESSION.RA,CURSO,ANO,PERIODO,TURMA);
 		});
 		return false;
 	});
 
 
-
 	$("#disciplina").change(function(){
 		$( "#disciplina option:selected" ).each(function() {
-			DISCIPLINA = $( this ).val();
-			loadNotas(USERSESSION.RA,CURSO,TURMA,PERIODO,DISCIPLINA);
-			habilita("#navbar0");
-//			loadNotas(86539,5,4,4,41);
 			
+			DISCIPLINA = $( this ).val();
+			alert(DISCIPLINA);
+			loadMedia(USERSESSION.RA,ANO,TURMA,PERIODO,DISCIPLINA);
 		});
 		return false;
 	});
