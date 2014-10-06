@@ -63,12 +63,12 @@ function retornaAvaliacoes(ra,curso,ano,periodo,turma){
 }
 
 
-function retornaMedia(ra,ano,turma,periodo,disciplina){
+function retornaMedia(ra,ano,turma,periodo){
 	// CHAMA A PROCEDURE
 	var input = {
 		    method : 'get',
 		    returnedContentType : 'json',
-		    path : '/unaspserver/notas/media.php?ra='+ra+'&ano='+ano+'&turma='+turma+'&periodo='+periodo+'&disciplina='+disciplina
+		    path : '/unaspserver/notas/media.php?ra='+ra+'&ano='+ano+'&turma='+turma+'&periodo='+periodo
 		};
 		
 	return WL.Server.invokeHttp(input);

@@ -3,10 +3,10 @@ function loadPerfil(ra){
 }
 
 function perfilSuccess(result){
-	
+
 	var auxResult = result.invocationResult.array;
 	if (auxResult.length > 0) {
-		displayCurso(auxResult);
+//		displayCurso(auxResult);
 		displayCursoOption(auxResult);
 	}else 
 		perfilFailure();	 
@@ -14,19 +14,17 @@ function perfilSuccess(result){
 //	alert(teste);
 }
 
-function displayCurso(items){
-	var selectCurso = $('#cursos-matriculados ul');		
-	for (var i = 0; i < items.length; i++) {
-		var li = $('<li/>').html(items[i].nome_curso).val(items[i].id_curso);
-		selectCurso.append(li);
-	}
-}
-
 function displayCursoOption(items){
-	var selectCurso = $('#curso');		
+	var selectCurso = $('#curso');	
+	var selectCursoPerfil = $('#cursos-matriculados ul');	
 	for (var i = 0; i < items.length; i++) {
-		var li = $('<option/>').html(items[i].nome_curso).val(items[i].id_curso);
-		selectCurso.append(li);
+		enumero = $.isNumeric(items[i].id_curso);
+		if(enumero === true){
+			var option = $('<option/>').html(items[i].nome_curso).val(items[i].id_curso);
+			var li = $('<li/>').html(items[i].nome_curso).val(items[i].id_curso);
+			selectCurso.append(option);
+			selectCursoPerfil.append(li);
+		}
 	}
 }
 

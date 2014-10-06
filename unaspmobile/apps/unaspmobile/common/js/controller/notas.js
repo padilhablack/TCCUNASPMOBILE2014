@@ -58,7 +58,6 @@ function displayTurma(items){
 /**TURMA**/ 
 
 
-
 /** PROCEDIMENTO PARA CARREGAR DISCIPLINA**/ 
 function loadDisciplina(ra,curso,ano,periodo,turma){
 	executaProcedure([ra,curso,ano,periodo,turma], 'StoreHTTP', 'retornaDisciplina', loadDiscilinaSuccess, loadFailure);
@@ -85,12 +84,12 @@ function displayDisciplina(items){
 
 
 /** PROCEDIMENTO PARA CARREGAR NOTAS*/ 
-function loadMedia(ra,ano,turma,periodo,disciplina){
-	executaProcedure( [ra,ano,turma,periodo,disciplina], 'StoreHTTP', 'retornaMedia', loadMediaSucess, loadFailure);
+function loadMedia(ra,ano,turma,periodo){
+	executaProcedure( [ra,ano,turma,periodo], 'StoreHTTP', 'retornaMedia', loadMediaSucess, loadFailure);
 }
 //função de sucesso
 function loadMediaSucess(result){
-	displayMedias(result.invocationResult);
+	displayMedias(result.invocationResult.array);
 }
 
 //Mostra no Option
@@ -100,11 +99,14 @@ function displayMedias(items){
 	
 	var table = '<table class="ui-responsive" style="width: 100%; padding: 5px;">'+
 	'<tbody><tr>'+
-	'<td class="campo_nota_titulo">Algum nome</td>'+
-	'<td class="campo_nota">'+items.valor_nota_teorica+'</td>'+
+	'<td class="campo_nota_titulo">'+items[0].des_diciplina+'</td>'+
+	'<td class="campo_nota">'+items[0].valor_nota_teorica+'</td>'+
 	'<td class="campo_nota">'+faltas+'</td>'+
 	' </tr></tbody></table>';
 	mostra_detalhes_curso.html(table);
+	
+//	teste = JSON.stringify(items[0].des_diciplina);
+//	alert(teste);
 }
 
 
