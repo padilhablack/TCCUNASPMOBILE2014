@@ -29,14 +29,22 @@ var CURSO = "", ANO = "", TURMA = "", PERIODO = "" , DISCIPLINA = ""; // variave
 	
 	
 	
+//	$("#turma").change(function(){
+//		$( "#turma option:selected" ).each(function() {
+//			TURMA = $( this ).val();
+//	
+//		});
+//		return false;
+//	});
+
 	$("#turma").change(function(){
 		$( "#turma option:selected" ).each(function() {
 			TURMA = $( this ).val();
+			loadDisciplina(USERSESSION.RA,CURSO,ANO,PERIODO,TURMA);
 			loadMedia(USERSESSION.RA,ANO,TURMA,PERIODO);
 		});
 		return false;
 	});
-
 
 //	$("#disciplina").change(function(){
 //		$( "#disciplina option:selected" ).each(function() {

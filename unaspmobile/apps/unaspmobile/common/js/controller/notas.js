@@ -95,16 +95,20 @@ function loadMediaSucess(result){
 //Mostra no Option
 function displayMedias(items){
 	var mostra_detalhes_curso  = $('#mostra_detalhes_curso'); 
-	 faltas = parseInt(items.falta_matricula_tardia) + parseInt(items.falta_pratica) + parseInt(items.falta_pratica_abadon) + parseInt(items.falta_teorica);
+	var table = '<table class="ui-responsive" style="width: 100%; padding: 5px;"><tbody>';
+	for (var  i = 0 ; i < items.length; i ++){
+		faltas = parseInt(items[i].falta_matricula_tardia) + parseInt(items[i].falta_pratica) + parseInt(items[i].falta_pratica_abadon) + parseInt(items[i].falta_teorica);
+		table += '<tr>'+
+		'<td class="campo_nota_titulo">'+items[i].des_diciplina+'</td>'+
+		'<td class="campo_nota">'+items[i].valor_nota_teorica+'</td>'+
+		'<td class="campo_nota">'+faltas+'</td>'+
+		' </tr>';
+	}
+
+	table += '</tbody></table>';
 	
-	var table = '<table class="ui-responsive" style="width: 100%; padding: 5px;">'+
-	'<tbody><tr>'+
-	'<td class="campo_nota_titulo">'+items[0].des_diciplina+'</td>'+
-	'<td class="campo_nota">'+items[0].valor_nota_teorica+'</td>'+
-	'<td class="campo_nota">'+faltas+'</td>'+
-	' </tr></tbody></table>';
 	mostra_detalhes_curso.html(table);
-	
+
 //	teste = JSON.stringify(items[0].des_diciplina);
 //	alert(teste);
 }
@@ -112,7 +116,7 @@ function displayMedias(items){
 
 function loadFailure(result){
 	rere = JSON.stringify(result);
-	alert(rere);
+	WL.Logger('erro'+rere);
 
 }
 

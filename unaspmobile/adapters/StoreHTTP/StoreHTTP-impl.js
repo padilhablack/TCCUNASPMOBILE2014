@@ -62,7 +62,6 @@ function retornaAvaliacoes(ra,curso,ano,periodo,turma){
 	return WL.Server.invokeHttp(input);
 }
 
-
 function retornaMedia(ra,ano,turma,periodo){
 	// CHAMA A PROCEDURE
 	var input = {
