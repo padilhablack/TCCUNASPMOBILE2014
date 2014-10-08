@@ -24,6 +24,7 @@ function displayCursoOption(items){
 			var li = $('<li/>').html(items[i].nome_curso).val(items[i].id_curso);
 			selectCurso.append(option);
 			selectCursoPerfil.append(li);
+			CURSO_NOME = items[i].nome_curso;
 		}
 	}
 }

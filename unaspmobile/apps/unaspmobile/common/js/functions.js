@@ -34,4 +34,10 @@ function resposive(){
 	
 }
 
+function habilita (elemento){
+	$("#"+elemento+"-button").attr('aria-disabled', true).removeClass('ui-state-disabled');
+	$("#"+elemento+"-button span").removeClass('ui-disabled');
+	$("#"+elemento+"").attr('disabled', false);
+
+}
 

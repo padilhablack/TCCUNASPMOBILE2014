@@ -4,6 +4,7 @@
 var path = "";// caminho padrão
 var USERSESSION; // variavel de sessão
 var busyIndicator = null; // icone de loading;
+var CURSO_NOME =""
 
 
 //função inicial

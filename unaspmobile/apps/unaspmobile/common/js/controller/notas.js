@@ -108,6 +108,8 @@ function displayMedias(items){
 	table += '</tbody></table>';
 	
 	mostra_detalhes_curso.html(table);
+	
+	$("#nome_curso_section").text(CURSO_NOME);
 
 //	teste = JSON.stringify(items[0].des_diciplina);
 //	alert(teste);
