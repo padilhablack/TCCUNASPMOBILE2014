@@ -63,3 +63,7 @@ $(document).on('pageinit',function(){
 $("#faltas-menu").click(function(){
 	loadAulas(RA,CURSO,TURMA,PERIODO,DISCIPLINA);
 });
+
+
+
+

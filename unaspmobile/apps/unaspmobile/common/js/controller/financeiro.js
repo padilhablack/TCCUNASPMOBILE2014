@@ -1,24 +1,24 @@
 
 
 function carregaAno(ra){
-	executaProcedure([ra], 'mysqlAdapter', 'FinanceiroAnoMes', sucess, null);
+	executaProcedure([ra], 'StoreHTTP', 'getFinanceiro', sucess, null);
 
 	function sucess(result){
-		data = result.invocationResult.resultSet;
+		data = result.invocationResult.array;
 		option = $("#option-ano");
 
 		for (var i = 0; i < data.length; i++) {
-			var li = $('<option/>').html(data[i].nome_ano).val(data[i].idano);
 
-			if($("#option-ano option:eq(1)").val() == data[i].idano){
-				$("#option-ano option:eq(1)").remove();
-				option.append(li);
-			}else{
-				option.append(li);
-			}
+			var li = $('<option/>').html(data[i].ano_referencia).val(data[i].ano_referencia);
+			option.append(li);
+
+			//verifica se existe elemeento duplicado
+			$("#option-ano option").each(function(){
+				if($(this).parent().length)
+					$("#option-ano option:contains('" + $(this).html() + "')").not(this).remove();
+			});
 
 		}
-
 	}
 
 }

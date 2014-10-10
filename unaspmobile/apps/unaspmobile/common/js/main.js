@@ -13,6 +13,7 @@ function wlCommonInit(){
 	verificaLogin();
 	resposive();
 
+
 	if (WL.Client.getEnvironment() == WL.Environment.WINDOWS_PHONE_8) {
 		path = "www/default/";
 	}
@@ -53,6 +54,7 @@ function sucess(result){
 		verificaDadoExistente(USERSESSION.EMAIL,"#display-email-user");
 		// carrega os cursos
 		loadPerfil(USERSESSION.RA);
+		carregaAno(USERSESSION.RA);
 		
 //		$("#display-name-user").text(USERSESSION.NOME);
 //		$("#display-email-user").text(USERSESSION.EMAIL);

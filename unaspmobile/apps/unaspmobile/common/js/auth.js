@@ -45,6 +45,7 @@ unaspChallengeHandler.handleChallenge = function(response){
 		loadPerfil(USERSESSION.RA);
 		$("#header-menu").show();
 		$.mobile.changePage("#perfil");
+		carregaAno(USERSESSION.RA);
 	}
 };
 
