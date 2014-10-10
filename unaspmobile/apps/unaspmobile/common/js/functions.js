@@ -13,8 +13,7 @@ function executaProcedure(pametros, adapter, procedure, sucess, failure){
 	var invocationData = {
 			adapter : adapter, 
 			procedure : procedure,
-			parameters : pametros, 
-
+			parameters : pametros,
 	};
 	WL.Client.invokeProcedure(invocationData,{
 		onSuccess : sucess,
@@ -40,4 +39,38 @@ function habilita (elemento){
 	$("#"+elemento+"").attr('disabled', false);
 
 }
+
+//função que verfica o login
+function verificaLogin(){
+		var invocationData = { // parametros para execução da função no adapter
+			adapter : 'autenticacaoAdapter', // adapter
+			procedure : 'getUsuarioActive',// procedure do adapater
+			parameters : [] // parametros
+	};
+
+	WL.Client.invokeProcedure(invocationData,{
+		onSuccess : function(result){
+			var useractive = result.invocationResult.user; 	// recebe dados do usuario ativo
+			if(useractive !== null ){ // se os dados do usuario ativo não estiverem vazios
+				// grava os dados na sessão
+				USERSESSION = { 
+						//parametros da variavel
+						RA : useractive.userId,
+						NOME : useractive.displayName,
+						EMAIL : useractive.email,
+						FOTO : useractive.foto
+				}
+				funcoesNecesarias();
+			}else{
+				$("#header-menu").hide();
+				$.mobile.changePage("#login"); // função de erro
+			}
+		},
+		onFailure : function(){
+			// colocar tratamento de errro.
+		} 
+	});
+}
+
+
 

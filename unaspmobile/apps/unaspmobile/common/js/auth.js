@@ -40,12 +40,7 @@ unaspChallengeHandler.handleChallenge = function(response){
 				FOTO : userSession.foto
 		}
 		
-		verificaDadoExistente(USERSESSION.NOME,"#display-name-user");
-		verificaDadoExistente(USERSESSION.EMAIL,"#display-email-user");
-		loadPerfil(USERSESSION.RA);
-		$("#header-menu").show();
-		$.mobile.changePage("#perfil");
-		carregaAno(USERSESSION.RA);
+		funcoesNecesarias();
 	}
 };
 
