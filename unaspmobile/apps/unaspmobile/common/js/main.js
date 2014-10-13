@@ -30,16 +30,9 @@ function funcoesNecesarias(){
 	active_menu('.botoes-menu li:eq(2)');
 }
 
-$('.botoes-menu li a img').click(function(){
-
-	
-})
-
 $('.botoes-menu li').click(function(){
 	index = $(this).index();
-	if(index == 1){
-		$('.effect').css('left','20%');
-	}else if(index == 2){
+	if(index == 2){
 		$('.effect').css('left','20%%');
 	}if(index == 3){
 		$('.effect').css('left','39%');
@@ -50,7 +43,10 @@ $('.botoes-menu li').click(function(){
 		$('.effect').css('left','80%');
 	}
 
-	active_menu(this);
+	if(index > 1){
+		active_menu(this);
+	}
+
 
 })
 
@@ -61,10 +57,12 @@ opo = $(elemento).find('img');
 	tamanho = $('.botoes-menu li a img').size();
 	for(var i = 1 ; i < tamanho; i++){
 
+		
 		name = $('.botoes-menu li a img :eq('+i+')').attr('name');
 		$('.botoes-menu li a img :eq('+i+')').attr('src','images/icones/'+name+'.png');
 
 	}
+	
 	$(opo).attr('src','images/icones/active/'+image+'.png');
 
 
