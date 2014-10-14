@@ -1,5 +1,5 @@
 
-// função que verifica se um arquivo contém null
+//VERIFICA SE UM ARQUIVO E NULL
 function verificaDadoExistente(parametro,destino){
 	if(parametro == null){
 		$(destino).text("");
@@ -8,7 +8,7 @@ function verificaDadoExistente(parametro,destino){
 	}
 }
 
-
+// FUNÇÃO PARA EXECUTAR PROCEDURES NOS ADAPTERS
 function executaProcedure(pametros, adapter, procedure, sucess, failure){
 	var invocationData = {
 			adapter : adapter, 
@@ -22,6 +22,7 @@ function executaProcedure(pametros, adapter, procedure, sucess, failure){
 
 }
 
+//FIXA ALGUMAS DIVS RELATIVAS AO SEU ESPAÇO
 function resposive(){
 	// fixa o o titulo do header abaixo de header total
 	var valor = $("#header-menu").height();
@@ -30,19 +31,17 @@ function resposive(){
 	var valorfooter = $('#footer-fixed').height();
 	$('.header-pages').css('margin-top',valor);
 	$('.content-unaspmobile ').css('margin-top',valorTotal);
-	
 }
 
 function habilita (elemento){
 	$("#"+elemento+"-button").attr('aria-disabled', true).removeClass('ui-state-disabled');
 	$("#"+elemento+"-button span").removeClass('ui-disabled');
 	$("#"+elemento+"").attr('disabled', false);
-
 }
 
 //função que verfica o login
 function verificaLogin(){
-		var invocationData = { // parametros para execução da função no adapter
+	var invocationData = { // parametros para execução da função no adapter
 			adapter : 'autenticacaoAdapter', // adapter
 			procedure : 'getUsuarioActive',// procedure do adapater
 			parameters : [] // parametros
@@ -71,6 +70,41 @@ function verificaLogin(){
 		} 
 	});
 }
+
+//NAVEGAÇÃO DO MENU
+function active_menu(elemento){
+	var opo = $(elemento).find('img'),
+	index = $(elemento).index(),
+	image = $(opo).attr('name'), 
+	tamanho = $('.botoes-menu li a img').size();
+	for(var i = 1 ; i < tamanho; i++){
+		if(index > 1){
+			name = $('.botoes-menu li a img :eq('+i+')').attr('name');
+			$('.botoes-menu li a img :eq('+i+')').attr('src','images/icones/'+name+'.png');
+		}
+	}
+	if(index == 2){
+		$('.effect').css('left','20%%');
+	}if(index == 3){
+		$('.effect').css('left','39%');
+	}else if(index == 4){
+		$('.effect').css('left','59%');
+	}
+	else if(index == 5){
+		$('.effect').css('left','80%');
+	}
+	$(opo).attr('src','images/icones/active/'+image+'.png');
+}
+
+//MOSTRA MENSAGEM DE ERRO
+function erroMessage(texto,classe){
+	$('.messages p').text(texto);
+	$('.messages').slideDown("slow").addClass(classe);
+	setTimeout(function(){
+		$('.messages').slideUp("slow");
+	}, 10000);
+}
+
 
 
 

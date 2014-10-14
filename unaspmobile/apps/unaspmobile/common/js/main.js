@@ -4,7 +4,7 @@
 var path = "";// caminho padrão
 var USERSESSION; // variavel de sessão
 var busyIndicator = null; // icone de loading;
-var CURSO_NOME =""
+var CURSO_NOME ="";
 
 
 //	função inicial
@@ -31,42 +31,10 @@ function funcoesNecesarias(){
 }
 
 $('.botoes-menu li').click(function(){
-	index = $(this).index();
-	if(index == 2){
-		$('.effect').css('left','20%%');
-	}if(index == 3){
-		$('.effect').css('left','39%');
-	}else if(index == 4){
-		$('.effect').css('left','59%');
-	}
-	else if(index == 5){
-		$('.effect').css('left','80%');
-	}
-
-	if(index > 1){
-		active_menu(this);
-	}
+	active_menu(this);
+});
 
 
-})
-
-function active_menu(elemento){
-opo = $(elemento).find('img');
-	
-	var image = $(opo).attr('name'), 
-	tamanho = $('.botoes-menu li a img').size();
-	for(var i = 1 ; i < tamanho; i++){
-
-		
-		name = $('.botoes-menu li a img :eq('+i+')').attr('name');
-		$('.botoes-menu li a img :eq('+i+')').attr('src','images/icones/'+name+'.png');
-
-	}
-	
-	$(opo).attr('src','images/icones/active/'+image+'.png');
-
-
-}
 
 
 

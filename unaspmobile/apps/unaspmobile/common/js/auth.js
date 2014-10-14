@@ -21,7 +21,7 @@ unaspChallengeHandler.handleChallenge = function(response){
 	// se autenticacao falhar
 	if (authRequired == true){
 //		alert(JSON.stringify(authRequired));
-		alert("Usuário ou senha incorreta");
+		erroMessage("Usuário ou senha incorreta",'danger');
 		$("#user").val("");
 		$("#password").val("");
 		unaspChallengeHandler.submitFailure();

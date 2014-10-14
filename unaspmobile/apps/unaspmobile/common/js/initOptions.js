@@ -7,10 +7,10 @@
     connectOnStartup : false,
 	
 	// # The callback function to invoke in case application fails to connect to Worklight Server
-	//onConnectionFailure: function (){},
+	//onConnectionFailure: 	erroMessage('Não foi possível conectar ao servidor! Tente novamente.'),
 	
 	// # Worklight server connection timeout
-	timeout: 30000,
+	timeout: 60000,
 	
 	// # How often heartbeat request will be sent to Worklight Server
 	//heartBeatIntervalInSecs: 20 * 60,
@@ -40,10 +40,9 @@
 		//url : ''
 	},
 	
-
 	
 	// # The options of busy indicator used during application start up
-//	busyOptions: {text: "Loading..."}
+	busyOptions: {text: "Carregando..."}
 };
 
 if (window.addEventListener) {

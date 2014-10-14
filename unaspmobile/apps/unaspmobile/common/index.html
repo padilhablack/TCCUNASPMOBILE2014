@@ -18,6 +18,10 @@
 <script src="jqueryMobile/jquery.mobile-git.js"></script>
 </head>
 <body style="display: none;">
+<div style="display:none" class="messages ui-icon-alert ui-btn-icon-left" id="messages">
+<p></p>
+</div>
+
 	<!-- header fixo -->
 	<div data-role="header" id="header-menu" data-position="fixed"
 		data-fullscreen="true"
@@ -43,8 +47,7 @@
 	<!-- /header fixo -->
 
 	<!-- footer fixo -->
-	<div data-role="footer" data-position="fixed" id="footer-fixed"
-		class="header-pages">
+	<div data-role="footer" data-position="fixed" id="footer-fixed">
 		<h6 style="color: transparent">dfgdfg</h6>
 		<div class="bar">
 			<a href="#" data-role="button" id="button"><img
@@ -54,7 +57,7 @@
 	<!-- /footer fixo -->
 
 	<!-- LOGIN -->
-	<div data-role="page" id="login">
+	<div data-role="page" id="login" class="children">
 		<div data-role="header" id="header-login" style="z-index: 9999">
 			<div class="top-login">
 				<span class="part1">UNASP</span><span class="part2">MOBILE</span>
@@ -79,7 +82,7 @@
 	<!-- /LOGIN -->
 
 	<!-- PERFIL -->
-	<div data-role="page" id="perfil">
+	<div data-role="page" id="perfil" class="children">
 		<div data-role="header" class="header-pages" data-position="fixed"
 			style="">
 			<ul class="titulo">
@@ -129,7 +132,7 @@
 	<!-- /PERFIL -->
 
 	<!-- NOTAS -->
-	<div data-role="page" id="notas">
+	<div data-role="page" id="notas" class="children">
 		<div data-role="header" id="header" data-position="fixed"
 			class="header-pages">
 			<ul class="titulo">
@@ -185,7 +188,7 @@
 
 
 	<!-- FINANCEIRO -->
-	<div data-role="page" id="financeiro">
+	<div data-role="page" id="financeiro" class="children">
 		<div data-role="header" id="header" data-position="fixed"
 			class="header-pages">
 			<ul class="titulo">
@@ -208,7 +211,7 @@
 	<!--/FINANCEIRO-->
 
 	<!-- RAMAIS -->
-	<div data-role="page" id="ramais">
+	<div data-role="page" id="ramais" class="children">
 		<div data-role="header" id="header" data-position="fixed"
 			class="header-pages">
 			<ul class="titulo">
