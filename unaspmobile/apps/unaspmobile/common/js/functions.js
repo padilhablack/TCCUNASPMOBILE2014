@@ -106,6 +106,30 @@ function erroMessage(texto,classe){
 }
 
 
+function saiDaSessao(){
+	WL.Client.logout('UnaspRealm', {onSuccess:function(){
+		setTimeout(function(){
+			$.mobile.changePage("#login");
+			$("#header-menu").hide();
+			$('#footer-fixed').show();
+			$('.bar').show();
+			}, 2000);
+	}});
+	$('#cursos-matriculados ul').html("");
+	$("#user").val("");
+	$("#password").val("");
+}
+
+// MOSTRAR ANIMAÇÃO AO CARREGAR DADOS
+function ajaxLoader(elemento){
+	
+	var html = "<div id='ajax-loader'>"+
+	"<img src='images/ajax.GIF'>"+
+	"</div>";
+	
+	$(elemento).html(html);
+}
+
 
 
 

@@ -13,6 +13,7 @@ function wlCommonInit(){
 	verificaLogin();
 	resposive();
 	loadAplication();
+	ajaxLoader('#mostra_detalhes_curso');
 
 	if (WL.Client.getEnvironment() == WL.Environment.WINDOWS_PHONE_8) {
 		path = "www/default/";
@@ -29,6 +30,8 @@ function funcoesNecesarias(){
 	$.mobile.changePage("#perfil");
 	$("#header-menu").show();
 	active_menu('.botoes-menu li:eq(2)');
+	$('#footer-fixed').show();
+	$('.bar').show();
 }
 
 $('.botoes-menu li').click(function(){
@@ -62,6 +65,8 @@ function loadAplication(){
 		carregado();	
 	},8000);
 }
+
+
 
 
 

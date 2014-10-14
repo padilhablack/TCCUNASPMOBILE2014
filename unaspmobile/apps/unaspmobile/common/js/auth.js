@@ -50,7 +50,7 @@ $("#entrar").bind('click', function () {
 	var password = $("#password").val();
 	
 	if(username == "" || password == ""){
-		showAlert("alert-error","Digite os dados corretamente!");
+		erroMessage('Preencha todos os dados','danger');
 		$("#user").val("");
 		$("#password").val("");
 	}
@@ -67,32 +67,11 @@ $("#entrar").bind('click', function () {
 
 //faz logout
 $(".bar").click(function(){
-	WL.Client.logout('UnaspRealm', {onSuccess:function(){
-		setTimeout(function(){
-			$.mobile.changePage("#login");
-			$("#header-menu").hide();
-			}, 2000);
-	}});
-	$('#cursos-matriculados ul').html("");
-	$("#user").val("");
-	$("#password").val("");
+	saiDaSessao();
+	});
 
 
-});
 
-
-$("#desligar").click(function(){
-	loading("show-page-loading-msg","Saindo..");
-	WL.Client.logout('UnaspRealm', {onSuccess:function(){
-		setTimeout(function(){sair()}, 5000);
-	}});
-	
-	function sair(){
-		$.mobile.loading( "hide" );
-		WL.App.close();
-	}
-	
-});
 
 
 

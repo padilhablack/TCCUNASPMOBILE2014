@@ -29,19 +29,20 @@
 		<div class="">
 			<ul id="outro" class="ui-grid-d ui-content botoes-menu">
 				<li class="ui-block-a effect "></li>
-				<li class="ui-block-a"><a href="" data-transition="slide"><img
-						src="images/logo_mini.png" name="logo_mini"></a></li>
+				<li class="ui-block-a"><a href="" data-transition="none"
+					data-ajax="false"> <img src="images/logo_mini.png"
+						name="logo_mini"></a></li>
 				<li class="ui-block-b menu-perfil"><a href="#perfil"
-					data-transition="slide"><img src="images/icones/user.png"
-						name="user"></a></li>
-				<li class="ui-block-c"><a href="#notas" data-transition="slide"><img
-						src="images/icones/notas.png" name="notas"></a></li>
-				<li class="ui-block-d"><a href="#financeiro"
-					data-transition="slide"><img src="images/icones/financeiro.png"
+					data-ajax="false" data-transition="none"><img
+						src="images/icones/user.png" name="user"></a></li>
+				<li class="ui-block-c"><a href="#notas" data-ajax="false"
+					data-transition="none"><img src="images/icones/notas.png"
+						name="notas"></a></li>
+				<li class="ui-block-d"><a href="#financeiro" data-ajax="false"
+					data-transition="none"><img src="images/icones/financeiro.png"
 						name="financeiro"></a></li>
-				<li class="ui-block-e"><a href="#ramais"
-					data-transition="slide"><img src="images/icones/ramal.png"
-						name="ramal"></a></li>
+				<li class="ui-block-e"><a href="#ramais" data-ajax="false"><img
+						src="images/icones/ramal.png" name="ramal"></a></li>
 			</ul>
 
 		</div>
@@ -74,12 +75,12 @@
 			</div>
 		</div>
 		<div data-role="content" id="content-login" style="padding: 15px">
-			
+
 			<div class="loadMobile">
 				<img src="images/icones/loading.gif">
 				<h3></h3>
 			</div>
-			
+
 			<form id="form" action="">
 				<label for="text">Login:</label><input type="text" name="user"
 					id="user"> <label for="text">Senha:</label><input
@@ -158,17 +159,18 @@
 							<option selected value=''>Curso:</option>
 						</select>
 					</div>
+					<br>
 					<div class="ui-block-a">
 						<select id="periodo" class="">
 							<option selected>Periodo:</option>
 						</select>
 					</div>
+					<br>
 					<div class="ui-block-a">
 						<select id="turma" class="">
-							<option selected>Turma:</option>
+							<option value="turma">Turma:</option>
 						</select>
 					</div>
-
 					<!--  <div class="ui-block-b">
 						<select id="disciplina" class="" >
 							<option selected>Disciplina:</option>
