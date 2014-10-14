@@ -42,7 +42,7 @@
 	
 	
 	// # The options of busy indicator used during application start up
-	busyOptions: {text: "Carregando..."}
+	//busyOptions: {text: "Carregando..."}
 };
 
 if (window.addEventListener) {

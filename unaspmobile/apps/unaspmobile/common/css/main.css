@@ -12,6 +12,21 @@ body {
 	-moz-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.75);
 	box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.75);
 }
+.loadMobile{
+	display: none;
+	margin: 10%;
+}
+
+.loadMobile img{
+width: 10em;
+display: block;
+margin: auto;
+}
+.loadMobile h3{
+	text-align: center;
+	color: rgb(202, 202, 202);
+	text-shadow: 0 /*{a-page-shadow-x}*/ 1px /*{a-page-shadow-y}*/ 0 /*{a-page-shadow-radius}*/ #110A0A /*{a-page-shadow-color}*/;
+}
 
 .danger{
 		background-color: #CC4646;

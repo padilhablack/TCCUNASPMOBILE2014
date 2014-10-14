@@ -7,11 +7,12 @@ var busyIndicator = null; // icone de loading;
 var CURSO_NOME ="";
 
 
-//	função inicial
-	function wlCommonInit(){
+//função inicial
+function wlCommonInit(){
 
 	verificaLogin();
 	resposive();
+	loadAplication();
 
 	if (WL.Client.getEnvironment() == WL.Environment.WINDOWS_PHONE_8) {
 		path = "www/default/";
@@ -33,6 +34,34 @@ function funcoesNecesarias(){
 $('.botoes-menu li').click(function(){
 	active_menu(this);
 });
+
+
+function carregar(){
+	$('#form').hide();
+	$('#footer-fixed').hide();
+	$('.bar').hide();
+	$(".loadMobile").fadeIn(3000);
+	$(".loadMobile h3").text("Carregando..");
+	function mostradf(){
+		$(".loadMobile h3").fadeIn("slow");
+		$(".loadMobile h3").fadeOut("slow");
+	}
+	setInterval(function(){mostradf()},2000);
+}
+
+function carregado(){
+	$('#form').show('slow');
+	$('#footer-fixed').show();
+	$('.bar').show();
+	$(".loadMobile").hide('slow');
+}
+
+function loadAplication(){
+	carregar();
+	setTimeout(function(){
+		carregado();	
+	},8000);
+}
 
 
 
