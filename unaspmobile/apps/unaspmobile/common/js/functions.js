@@ -8,7 +8,7 @@ function verificaDadoExistente(parametro,destino){
 	}
 }
 
-// FUNÇÃO PARA EXECUTAR PROCEDURES NOS ADAPTERS
+//FUNÇÃO PARA EXECUTAR PROCEDURES NOS ADAPTERS
 function executaProcedure(pametros, adapter, procedure, sucess, failure){
 	var invocationData = {
 			adapter : adapter, 
@@ -102,7 +102,7 @@ function erroMessage(texto,classe){
 	$('.messages').slideDown("slow").addClass(classe);
 	setTimeout(function(){
 		$('.messages').slideUp("slow");
-	}, 10000);
+	}, 5000);
 }
 
 
@@ -113,23 +113,32 @@ function saiDaSessao(){
 			$("#header-menu").hide();
 			$('#footer-fixed').show();
 			$('.bar').show();
-			}, 2000);
+			reset();
+		}, 2000);
 	}});
-	$('#cursos-matriculados ul').html("");
-	$("#user").val("");
-	$("#password").val("");
+
 }
 
-// MOSTRAR ANIMAÇÃO AO CARREGAR DADOS
+//MOSTRAR ANIMAÇÃO AO CARREGAR DADOS
 function ajaxLoader(elemento){
-	
 	var html = "<div id='ajax-loader'>"+
 	"<img src='images/ajax.GIF'>"+
 	"</div>";
-	
 	$(elemento).html(html);
 }
 
+function reset(){
+WL.Client.reloadApp();
+	$('#cursos-matriculados ul').html("");
+	$("#user").val("");
+	$("#password").val("");
+	$("#curso").selectmenu('refresh');
+	$("#periodo").selectmenu('refresh');
+	$("#turma").selectmenu('refresh');
+	$("#cabecalho_cursos").hide();
+	$("#mostra_detalhes_curso").hide();
+
+}
 
 
 

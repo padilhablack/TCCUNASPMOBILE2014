@@ -29,9 +29,9 @@ unaspChallengeHandler.handleChallenge = function(response){
 
 		// se autenticacao der certo
 	} else if (authRequired == false){
-
 //	teste = JSON.stringify(userSession);
 //	alert(teste);
+		carregar("Entrando...");
 		
 		USERSESSION = {
 				NOME : userSession.displayName,

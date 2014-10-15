@@ -36,6 +36,7 @@ function displayPeriodo(items){
 /**TURMA**/ 
 
 function loadTurma(ra,curso,ano,periodo){
+
 	executaProcedure([ra,curso,ano,periodo], 'StoreHTTP', 'retornaTurma', loadTurmaSuccess, loadFailure);
 }
 //função de sucesso
@@ -60,10 +61,12 @@ function displayTurma(items){
 
 /** PROCEDIMENTO PARA CARREGAR DISCIPLINA**/ 
 function loadDisciplina(ra,curso,ano,periodo,turma){
+	ajaxLoader('#mostra_detalhes_curso');
 	executaProcedure([ra,curso,ano,periodo,turma], 'StoreHTTP', 'retornaDisciplina', loadDiscilinaSuccess, loadFailure);
 }
 
 function loadDiscilinaSuccess(result){
+
 	if (result.invocationResult.array.length > 0) {
 		displayDisciplina(result.invocationResult.array);
 	}else 
@@ -72,6 +75,7 @@ function loadDiscilinaSuccess(result){
 
 //Mostra no Option
 function displayDisciplina(items){
+	$('.cabecalho_cursos').show();
 	var selectDisciplina = $('#disciplina'), optionpadrao = $('<option/>').html("");
 	selectDisciplina = $('#disciplina').empty();
 	selectDisciplina.append(optionpadrao);
@@ -97,6 +101,7 @@ function displayMedias(items){
 	var mostra_detalhes_curso  = $('#mostra_detalhes_curso'); 
 	var table = '<table class="ui-responsive" style="width: 100%; padding: 5px;"><tbody>';
 	for (var  i = 0 ; i < items.length; i ++){
+	
 		faltas = parseInt(items[i].falta_matricula_tardia) + parseInt(items[i].falta_pratica) + parseInt(items[i].falta_pratica_abadon) + parseInt(items[i].falta_teorica);
 		table += '<tr>'+
 		'<td class="campo_nota_titulo">'+items[i].des_diciplina+'</td>'+

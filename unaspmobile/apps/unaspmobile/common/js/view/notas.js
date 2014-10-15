@@ -24,10 +24,8 @@ $(document).on('pageinit',function(){
 
 	$("#periodo").change(function(){
 		$( "#periodo option:selected").each(function() {
-			
 			$("#turma").find("option[value='turma']").attr("selected",true);
 			$("#turma").selectmenu("refresh");
-
 			PERIODO = $( this ).val();
 			ANO = $( this ).attr('ano');
 			loadTurma(USERSESSION.RA,CURSO,ANO,PERIODO);
@@ -51,7 +49,7 @@ $(document).on('pageinit',function(){
 			TURMA = $( this ).val();
 			loadDisciplina(USERSESSION.RA,CURSO,ANO,PERIODO,TURMA);
 			loadMedia(USERSESSION.RA,ANO,TURMA,PERIODO);
-			$('.cabecalho_cursos').show();
+		
 		});
 		return false;
 	});

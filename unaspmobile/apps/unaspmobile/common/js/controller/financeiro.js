@@ -1,5 +1,6 @@
 
 function loadFinanceiro(ra,valor,ano){
+	ajaxLoader('#conteudo-financeiro');
 	executaProcedure([ra], 'StoreHTTP', 'getFinanceiro', function(result){
 		data = result.invocationResult.array;
 		option = $("#option-ano");
@@ -37,6 +38,16 @@ function loadFinanceiro(ra,valor,ano){
 					if($(this).parent().length)
 						$("#option-ano option:contains('" + $(this).html() + "')").not(this).remove();
 				});
+				
+				table.push('<tr><td>');
+				table.push(data[i].ano_referencia);
+				table.push('</td><td>');
+				table.push(data[i].des_parcela);
+				table.push('</td><td>');
+				table.push(data[i].vencimento);
+				table.push('</td><td>');
+				table.push(data[i].valor);
+				table.push('</td></tr>');
 			}
 
 
@@ -55,6 +66,8 @@ function loadFinanceiro(ra,valor,ano){
 					table.push('</td></tr>');
 				}
 			}
+			
+			
 		}
 
 		//FIM TABELA
