@@ -1,19 +1,19 @@
-#Mon Oct 13 01:46:28 BRT 2014
-base.iphone=1019386945
+#Fri Oct 17 11:13:00 BRT 2014
+base.iphone=1462141863
 encoding//apps/unaspmobile/common/index.html=UTF-8
-base.android=3825151067
-jsonstore.windowsphone8=1803770801
+base.android=1388915884
+jsonstore.windowsphone8=2105258309
 common.android=1795526790
 fipshttp.android=690177043
-wl_version=6.2.0.00.20140904-1709
+wl_version=6.2.0.00.20141002-1640
 eclipse.preferences.version=1
 encoding//apps/unaspmobile/common/js/main.js=UTF-8
-base.windowsphone8=1188172710
+base.windowsphone8=509446613
 encoding/<project>=UTF-8
 jsonstore.android=790094678
 analytics.ipad=3882346749
 fipshttp.iphone=933660520
 fipshttp.ipad=2537779042
-base.ipad=1019386945
+base.ipad=1462141863
 analytics.iphone=172702511
 analytics.android=2541125865

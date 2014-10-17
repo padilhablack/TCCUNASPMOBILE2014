@@ -13,6 +13,8 @@ body {
 	box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
+
+
 .loadMobile {
 	display: none;
 	margin: 10%;
@@ -195,7 +197,7 @@ body {
 }
 
 .header-pages {
-	
+	position:fixed;
 }
 /*Perfil*/
 .content-unaspmobile {
@@ -220,7 +222,7 @@ body {
 }
 
 .ui-listview>.ui-li-static {
-	padding: 3.7em 1em;
+	padding: 0.7em 1em;
 }
 
 .ui-listview .ui-li-has-thumb>img:first-child {
