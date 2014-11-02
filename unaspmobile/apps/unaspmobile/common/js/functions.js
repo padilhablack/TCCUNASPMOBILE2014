@@ -31,9 +31,17 @@ function resposive(){
 	var valorfooter = $('#footer-fixed').height();
 	tamanho_login = $('.ui-mobile-viewport').height();
 	back_login_image = tamanho_login / 2.3;
+	
+	content = $('#conteudo-financeiro').css('height');
+	bar = $('.bar a img').height();
+	
+	
+	
 	$('.back-login img ').css('height',back_login_image);
 	$('.header-pages').css('margin-top',valor);
 	$('.content-unaspmobile ').css('margin-top',valorTotal);
+	
+
 	dsfsdfsdf = back_login_image - 70
 	$('.logo img').css('width',dsfsdfsdf);
 }

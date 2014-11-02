@@ -13,7 +13,7 @@ function loadFinanceiro(ra,valor,ano){
 		table.push('</thead>');
 		table.push('<tbody style="text-align:center">');
 
-		for (var i = 0; i < data.length; i++) {
+		for (var i = 0; i <  data.length; i++) {
 
 //			LISTA TODOS OS DADOS FINANCEIROS NA TELA
 
@@ -28,6 +28,8 @@ function loadFinanceiro(ra,valor,ano){
 					table.push('</td><td>');
 					table.push(data[i].valor);
 					table.push('</td></tr>');
+					
+					
 				}
 			}
 
@@ -50,7 +52,11 @@ function loadFinanceiro(ra,valor,ano){
 				table.push('</td><td>');
 				table.push(data[i].valor);
 				table.push('</td></tr>');
+				
+
 			}
+			
+			
 
 
 //			LISTA POR ANO
@@ -68,13 +74,21 @@ function loadFinanceiro(ra,valor,ano){
 				}
 			}
 			
+	
+				
+			
+			
+
 			
 		}
 
+
+		
 		//FIM TABELA
 		table.push('</tbody>');
 		table.push('</table>');
 		content.innerHTML = table.join('');
+
 
 	}, null);
 
