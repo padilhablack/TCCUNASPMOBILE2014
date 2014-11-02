@@ -21,7 +21,7 @@ unaspChallengeHandler.handleChallenge = function(response){
 	// se autenticacao falhar
 	if (authRequired == true){
 //		alert(JSON.stringify(authRequired));
-		erroMessage("Usuário ou senha incorreta",'danger');
+		erroMessage("Usuário ou senha incorreta",'messages-error');
 		$("#user").val("");
 		$("#password").val("");
 		unaspChallengeHandler.submitFailure();
@@ -29,9 +29,6 @@ unaspChallengeHandler.handleChallenge = function(response){
 
 		// se autenticacao der certo
 	} else if (authRequired == false){
-//	teste = JSON.stringify(userSession);
-//	alert(teste);
-		carregar("Entrando...");
 		
 		USERSESSION = {
 				NOME : userSession.displayName,
@@ -41,6 +38,7 @@ unaspChallengeHandler.handleChallenge = function(response){
 		}
 		
 		funcoesNecesarias();
+
 	}
 };
 
@@ -49,20 +47,19 @@ $("#entrar").bind('click', function () {
 	var username = $("#user").val();
 	var password = $("#password").val();
 	
-	if(username == "" || password == ""){
-		erroMessage('Preencha todos os dados','danger');
-		$("#user").val("");
-		$("#password").val("");
+	if(username == "" && password == ""){
+		erroMessage('Preencha todos os dados','messages-alert');
+	}else{
+		var invocationData = {
+				adapter : "autenticacaoAdapter",
+				procedure : "getStories",
+				parameters : [username, password]
+		};
+
+		unaspChallengeHandler.submitAdapterAuthentication(invocationData, {});
+		return false;
 	}
 	
-	var invocationData = {
-			adapter : "autenticacaoAdapter",
-			procedure : "getStories",
-			parameters : [username, password]
-	};
-
-	unaspChallengeHandler.submitAdapterAuthentication(invocationData, {});
-	return false;
 });
 
 //faz logout

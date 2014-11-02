@@ -3,7 +3,6 @@ function loadPerfil(ra){
 }
 
 function perfilSuccess(result){
-
 	var auxResult = result.invocationResult.array;
 	if (auxResult.length > 0) {
 //		displayCurso(auxResult);

@@ -1,7 +1,9 @@
 
 function loadFinanceiro(ra,valor,ano){
+
 	ajaxLoader('#conteudo-financeiro');
 	executaProcedure([ra], 'StoreHTTP', 'getFinanceiro', function(result){
+
 		data = result.invocationResult.array;
 		option = $("#option-ano");
 		var content = document.getElementById('conteudo-financeiro');
@@ -29,7 +31,7 @@ function loadFinanceiro(ra,valor,ano){
 				}
 			}
 
-//			LISTA OS ANOS NAS OPÇÕES
+//			LISTA OS ANOS No OPTION DO SELECT
 			
 			else if(valor == 'option'){
 				var li = $('<option/>').html(data[i].ano_referencia).val(data[i].ano_referencia);
@@ -52,7 +54,6 @@ function loadFinanceiro(ra,valor,ano){
 
 
 //			LISTA POR ANO
-			
 			else if(valor == 'ano_unico'){
 				if(data[i].ano_referencia === ano && (data[i].vencimento).substring(6,10) == ano && data[i].des_parcela != null){
 					table.push('<tr><td>');
@@ -78,3 +79,4 @@ function loadFinanceiro(ra,valor,ano){
 	}, null);
 
 }
+
