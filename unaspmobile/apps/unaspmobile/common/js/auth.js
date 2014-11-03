@@ -21,12 +21,13 @@ unaspChallengeHandler.handleChallenge = function(response){
 	// se autenticacao falhar
 	if (authRequired == true){
 //		alert(JSON.stringify(authRequired));
+		carregado();
 		erroMessage("Usuário ou senha incorreta",'messages-error');
 		$("#user").val("");
 		$("#password").val("");
 		unaspChallengeHandler.submitFailure();
 		$("#header-menu").hide();
-
+	
 		// se autenticacao der certo
 	} else if (authRequired == false){
 		
@@ -50,16 +51,26 @@ $("#entrar").bind('click', function () {
 	if(username == "" && password == ""){
 		erroMessage('Preencha todos os dados','messages-alert');
 	}else{
+		
+		carregar("Enviando..");
+		
 		var invocationData = {
 				adapter : "autenticacaoAdapter",
 				procedure : "getStories",
 				parameters : [username, password]
 		};
 
-		unaspChallengeHandler.submitAdapterAuthentication(invocationData, {});
-		return false;
+		unaspChallengeHandler.submitAdapterAuthentication(invocationData, {
+			onSuccess : function(){
+				carregado();
+			
+					funcoesNecesarias();	
+			
+			},
+		});
+
 	}
-	
+	return false;
 });
 
 //faz logout

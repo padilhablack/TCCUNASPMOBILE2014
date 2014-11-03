@@ -38,7 +38,7 @@ body h3 {
 	border: 0px;
 }
 
-/*loading...*/
+/*Loading Initial*/
 .loadMobile {
 	display: none;
 	color: #fff;
@@ -50,6 +50,17 @@ body h3 {
 	margin: 10% auto;
 	display: block;
 }
+
+.loading{
+	
+}
+#ajax-loader img{
+	display:block;
+	margin: 0 auto;
+	width: 70px;
+	height:auto !important;
+}
+
 
 #footer-fixed {
 	text-align: center;

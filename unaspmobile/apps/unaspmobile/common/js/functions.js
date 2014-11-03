@@ -70,7 +70,7 @@ function verificaLogin(){
 						FOTO : useractive.foto
 				}
 				funcoesNecesarias();
-				$.mobile.changePage("#perfil");
+		
 			}else{
 				$("#header-menu").hide();
 				$.mobile.changePage("#login"); // função de erro
@@ -106,10 +106,10 @@ function carregar(texto){
 }
 
 function carregado(){
-	$('#form').show('slow');
+	$('#form').show();
 	$('#footer-fixed').show();
 	$('.bar').show();
-	$(".loadMobile").hide('slow');
+	$(".loadMobile").hide(1000);
 }
 ///LOADING DE ENTRADA
 
@@ -121,11 +121,11 @@ function funcoesNecesarias(){
 	loadPerfil(USERSESSION.RA);
 	loadFinanceiro(USERSESSION.RA,'option','');
 	loadFinanceiro(USERSESSION.RA,'all','');
-	$.mobile.changePage("#perfil");
 	$("#header-menu").show();
 	active_menu('.botoes-menu li:eq(2)');
 	$('#footer-fixed').show();
 	$('.bar').show();
+	$.mobile.changePage("#perfil");
 }
 
 
@@ -152,6 +152,7 @@ function active_menu(elemento){
 		$('.effect').css('left','80%');
 	}
 	$(opo).attr('src','images/icones/active/'+image+'.png');
+	
 }
 
 //MOSTRA MENSAGENS DE ERRO E DE ALERTA
@@ -171,14 +172,11 @@ function erroMessage(texto,classe){
 // FAZ LOGOU NO SISTEMA
 function saiDaSessao(){
 	WL.Client.logout('UnaspRealm', {onSuccess:function(){
-		setTimeout(function(){
-			USERSESSION = null;
-			$.mobile.changePage("#login");
-			$("#header-menu").hide();
-			$('#footer-fixed').hide();
-			$('.bar').show();
-			reset();
-		}, 2000);
+		
+		USERSESSION = null;
+		$.mobile.changePage("#login");
+		loadAplication("Saindo..");
+	
 	}});
 
 }

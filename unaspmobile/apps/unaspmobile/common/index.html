@@ -65,12 +65,13 @@
 			<h3></h3>
 			</div>
 		<!-- /Loading Form -->
-			
 			<form id="form" action="" style="display:none;">
-				<label for="text">Login:</label><input type="text" name="user" id="user"> 
-				<label for="text">Senha:</label><input type="password" name="password" id="password"> <a href="#" data-role="button" id="entrar">Entrar</a>
+				<label for="text">Login:</label><input type="tel" name="user" id="user"> 
+				<label for="text">Senha:</label><input type="password" name="password" id="password"> 
+				<a href="#" data-role="button" id="entrar" >Entrar</a>
 			</form>
 		</div>
+		
 	</div>
 	<!-- /LOGIN -->
 
@@ -133,17 +134,17 @@
 			<div class="seleciona_curso" style="margin: 0; position: relative;">
 				<div class="ui-grid-solo">
 					<div class="ui-block-a">
-						<select id="curso" data-native-menu="false">
+						<select id="curso">
 							<option selected value='curso'>Curso:</option>
 						</select>
 					</div>
-					<br>
+	
 					<div class="ui-block-a">
 						<select id="periodo">
 							<option selected>Periodo:</option>
 						</select>
 					</div>
-					<br>
+		
 					<div class="ui-block-a">
 						<select id="turma">
 							<option value="turma">Turma:</option>
@@ -156,8 +157,8 @@
 					</div>-->
 				</div>
 			</div>
-			<div class="cabecalho_cursos">
-				<table style="width: 100%; padding: 5px;" class='ui-responsive'>
+			<div class="cabecalho_cursos" style="display:none">
+				<table style="width: 100%; padding: 5px;" class='ui-responsive' >
 					<tr style="color: #676665">
 						<td width="60%"><h3 id="nome_curso_section">Curso</h3></td>
 						<td width="20%" style="text-align: center"><h3>Média</h3></td>
@@ -187,23 +188,26 @@
 					</select>
 				</div>
 			</div>
-			<div id='conteudo-financeiro'></div>
+			<div id='conteudo-financeiro' class="ui-content"></div>
 		</div>
 	</div>
 	<!--/FINANCEIRO-->
 
 	<!-- RAMAIS -->
 	<div data-role="page" id="ramais" class="children">
-		<div data-role="header" id="header" data-position="fixed" class="header-pages">
+		<div data-role="header" id="header" data-position="fixed"
+			class="header-pages">
 			<ul class="titulo">
 				<li><img src="images/icones/ramal.png"></li>
 				<li>Ramais</li>
 			</ul>
 		</div>
-		<div data-role="content" class="content-unaspmobile" style="padding: 15px">
+		<div data-role="content" class="content-unaspmobile"
+			style="padding: 15px">
 			<div class="ui-grid-solo options">
 				<div class=" ui-block-a options">
-					<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" id="cursos-matriculados">
+					<div data-role="collapsible" data-collapsed-icon="carat-d"
+						data-expanded-icon="carat-u">
 						<h3>Diretoria</h3>
 						<ul data-role="listview">
 							<li>Diretor Geral do Campus (PAULO MARTINI) - 9001</li>
@@ -221,32 +225,45 @@
 					</div>
 				</div>
 				<div class=" ui-block-a options">
-					<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" id="cursos-matriculados">
+					<div data-role="collapsible" data-collapsed-icon="carat-d"
+						data-expanded-icon="carat-u">
 						<h3>Informática</h3>
-						<ul data-role="listview" data-inset="true">
+						<ul data-role="listview" data-inset="true" data-theme="c">
 							<li><a href="#">Suporte - 9533/9387/9064</a></li>
-							<li><a href="#">Gerente Sistema Informação (JOEL RIBEIRO) - 9010</a></li>
-							<li><a href="#">Administrador de Redes (ALEXANDRE ALFIERI) - 9411</a></li>
-							<li><a href="#">Gerente de Suporte (GEOVANE OLIARI) - 9611</a></li>
+							<li><a href="#">Gerente Sistema Informação (JOEL
+									RIBEIRO) - 9010</a></li>
+							<li><a href="#">Administrador de Redes (ALEXANDRE
+									ALFIERI) - 9411</a></li>
+							<li><a href="#">Gerente de Suporte (GEOVANE OLIARI) -
+									9611</a></li>
 							<li><a href="#">Analista de Suporte (LUIS SCHUTZ) - 9011</a></li>
 							<li><a href="#">Analista de Suporte (CATI BARRETO) -9364</a></li>
 							<li><a href="#">Desenvolvimento Web ( ANDREI ) 9609</a></li>
-							<li><a href="#">Coordenação Laboratórios de Educação Básica (HÉBER SOUZA) - 9096</a></li>
-							<li><a href="#">Coordenação Laboratórios de Ensino Superior (ELIAS GOMES) - 9032</a></li>
+							<li><a href="#">Coordenação Laboratórios de Educação
+									Básica (HÉBER SOUZA) - 9096</a></li>
+							<li><a href="#">Coordenação Laboratórios de Ensino
+									Superior (ELIAS GOMES) - 9032</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class=" ui-block-a options">
-					<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" id="cursos-matriculados">
+					<div data-role="collapsible" data-collapsed-icon="carat-d"
+						data-expanded-icon="carat-u">
 						<h3>Tesouraria</h3>
-						<ul data-role="listview">
+						<ul data-role="listview" data-theme="c">
 							<li><a href="#">Fax - Financeiro - 3858-9095</a></li>
-							<li><a href="#">Gerente Financeiro (SAUL CESÁRIO FRANCA) - 9007</a></li>
-							<li><a href="#">Secretaria Geral Financeiro (ELISÂNGELA ASSIS) - 9092/9307</a></li>
-							<li><a href="#">Gerenciador de Finanças Estudantis (OSVAIR HUNGLAUB) - 9325</a></li>
-							<li><a href="#">Finanças Estudantis Ensino Superior (SIRLENE) - 9559</a></li>
-							<li><a href="#">Finanças Estudantis Ensino Superior -9386/9048/9416</a></li>
-							<li><a href="#">Financeiro Estudantil do Centro de Comunicação - 9595</a></li>
+							<li><a href="#">Gerente Financeiro (SAUL CESÁRIO FRANCA)
+									- 9007</a></li>
+							<li><a href="#">Secretaria Geral Financeiro (ELISÂNGELA
+									ASSIS) - 9092/9307</a></li>
+							<li><a href="#">Gerenciador de Finanças Estudantis
+									(OSVAIR HUNGLAUB) - 9325</a></li>
+							<li><a href="#">Finanças Estudantis Ensino Superior
+									(SIRLENE) - 9559</a></li>
+							<li><a href="#">Finanças Estudantis Ensino Superior
+									-9386/9048/9416</a></li>
+							<li><a href="#">Financeiro Estudantil do Centro de
+									Comunicação - 9595</a></li>
 							<li><a href="#">Cobrança - 9509/9558/9549</a></li>
 							<li><a href="#">Contador (HELDER ÁGUAS) - 9009</a></li>
 							<li><a href="#">Auxiliar Contábil (BEKANG) - 9016</a></li>
@@ -263,16 +280,22 @@
 
 				<div class=" ui-block-a options">
 					<div data-role="collapsible" data-collapsed-icon="carat-d"
-						data-expanded-icon="carat-u" id="cursos-matriculados">
+						data-expanded-icon="carat-u">
 						<h3>Tesouraria</h3>
-						<ul data-role="listview">
+						<ul data-role="listview" data-theme="c">
 							<li><a href="#">Fax - Financeiro - 3858-9095</a></li>
-							<li><a href="#">Gerente Financeiro (SAUL CESÁRIO FRANCA) - 9007</a></li>
-							<li><a href="#">Secretaria Geral Financeiro (ELISÂNGELA ASSIS) - 9092/9307</a></li>
-							<li><a href="#">Gerenciador de Finanças Estudantis (OSVAIR HUNGLAUB) - 9325</a></li>
-							<li><a href="#">Finanças Estudantis Ensino Superior (SIRLENE) - 9559</a></li>
-							<li><a href="#">Finanças Estudantis Ensino Superior -9386/9048/9416</a></li>
-							<li><a href="#">Financeiro Estudantil do Centro de Comunicação - 9595</a></li>
+							<li><a href="#">Gerente Financeiro (SAUL CESÁRIO FRANCA)
+									- 9007</a></li>
+							<li><a href="#">Secretaria Geral Financeiro (ELISÂNGELA
+									ASSIS) - 9092/9307</a></li>
+							<li><a href="#">Gerenciador de Finanças Estudantis
+									(OSVAIR HUNGLAUB) - 9325</a></li>
+							<li><a href="#">Finanças Estudantis Ensino Superior
+									(SIRLENE) - 9559</a></li>
+							<li><a href="#">Finanças Estudantis Ensino Superior
+									-9386/9048/9416</a></li>
+							<li><a href="#">Financeiro Estudantil do Centro de
+									Comunicação - 9595</a></li>
 							<li><a href="#">Cobrança - 9509/9558/9549</a></li>
 							<li><a href="#">Contador (HELDER ÁGUAS) - 9009</a></li>
 							<li><a href="#">Auxiliar Contábil (BEKANG) - 9016</a></li>
@@ -289,312 +312,330 @@
 
 				<div class=" ui-block-a options">
 					<div data-role="collapsible" data-collapsed-icon="carat-d"
-						data-expanded-icon="carat-u" id="cursos-matriculados">
+						data-expanded-icon="carat-u">
 						<h3>Recursos Humanos</h3>
-						<ul data-role="listview">
-							<li><a href="#">Ger. de Recursos Humanos (MOISÉS A.SOUZA) - 9012</a></li>
-							<li><a href="#">Assistente de Pessoal (TAMIRES/AMARILDO)- 9569</a></li>
-							<li><a href="#">Assistente de Pessoal (TATIANA/SAMARA) -9516</a></li>
+						<ul data-role="listview" data-theme="c">
+							<li><a href="#">Ger. de Recursos Humanos (MOISÉS
+									A.SOUZA) - 9012</a></li>
+							<li><a href="#">Assistente de Pessoal
+									(TAMIRES/AMARILDO)- 9569</a></li>
+							<li><a href="#">Assistente de Pessoal (TATIANA/SAMARA)
+									-9516</a></li>
 						</ul>
 					</div>
 				</div>
 
 				<div class=" ui-block-a options">
 					<div data-role="collapsible" data-collapsed-icon="carat-d"
-						data-expanded-icon="carat-u" id="cursos-matriculados">
+						data-expanded-icon="carat-u">
 						<h3>Comuni</h3>
-						<ul data-role="listview">
-							<li><a href="#">Ger. de Recursos Humanos (MOISÉS A.SOUZA) - 9012</a></li>
-							<li><a href="#">Assistente de Pessoal (TAMIRES/AMARILDO)- 9569</a></li>
-							<li><a href="#">Assistente de Pessoal (TATIANA/SAMARA)-9516</a></li>
+						<ul data-role="listview" data-theme="c">
+							<li><a href="#">Ger. de Recursos Humanos (MOISÉS
+									A.SOUZA) - 9012</a></li>
+							<li><a href="#">Assistente de Pessoal
+									(TAMIRES/AMARILDO)- 9569</a></li>
+							<li><a href="#">Assistente de Pessoal
+									(TATIANA/SAMARA)-9516</a></li>
 						</ul>
 					</div>
 				</div>
 
 
+				<div class=" ui-block-a options">
+					<div data-role="collapsible" data-collapsed-icon="carat-d"
+						data-expanded-icon="carat-u">
+						<h3>Núcleo Multidisciplinar</h3>
+						<ul data-role="listview" data-theme="c">
+							<li><a href="#">Recepção - 9536</a></li>
+							<li><a href="#">Assessoria Acadêmica (VALCENIR
+									COSTA)-9073</a></li>
+							<li><a href="#">Diretor GRI Brasil (NAHOR NEVES JR.)
+									-9051</a></li>
+							<li><a href="#">Coordenação de Pesquisa (FRANCISCA
+									PINHEIRO) - 9314</a></li>
+							<li><a href="#">Núcleo Jurídico (JOSÉ GUIMARÃES- 9050</a></li>
+							<li><a href="#">Agência Zoom ( Secretarias ) - 9047</a></li>
+							<li><a href="#">Agência Zoom (SUZAENY) - 9547</a></li>
+							<li><a href="#">Agencia de Jornalismo ABJ (LUIS
+									FERNANDO) - 9072</a></li>
+							<li><a href="#">Unasp Virtual - 9090</a></li>
+							<li><a href="#">Agência zoom ( KENNY ) - 9481</a></li>
+							<li><a href="#">Agência zoom ( Fabiano ) - 9482</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class=" ui-block-a options">
+					<div data-role="collapsible" data-collapsed-icon="carat-d"
+						data-expanded-icon="carat-u">
+						<h3>Educação Superior</h3>
+						<ul data-role="listview" data-theme="c">
+
+							<li><a href="#">Recepção - 9099</a></li>
+							<li><a href="#">Fax - Secretaria Geral - 3858 9019</a></li>
+							<li><a href="#">Secretaria Geral (MARCELI MONTEIRO) -
+									9326/9532</a></li>
+							<li><a href="#">Secretaria Geral (BETH/LIDIA) - 9026</a></li>
+							<li><a href="#">Coordenação Pós-Graduação (ADRIANO
+									COELHO) - 9006</a></li>
+							<li><a href="#">Secretaria Coordenação Pós-graduação
+									(ÂNGELA ARRAIS) - 9543-9311</a></li>
+							<li><a href="#">Extensão Universitária (GAZETA) - 9077</a></li>
+							<li><a href="#">PROAD (ANA RIEN PEREZ) - 9062/9535</a></li>
+							<li><a href="#">Diretoria de Desenvolvimento Espiritual
+									(PR. EDSON ROMERO) - 9002/9302</a></li>
+							<li><a href="#">Diretório Acadêmico - 9542</a></li>
+							<li><a href="#">UNASPRESS (RENATO GROGER) - 9355/9055</a></li>
+							<li><a href="#">Central de Estágios (MIRIAM ALFIERI) -
+									9323</a></li>
+							<li><a href="#">Instituto de Línguas (PROF. ARIADNE) -
+									9316/9013</a></li>
+							<li><a href="#">Sala dos Professores - 9586</a></li>
+							<li><a href="#">Coordenação de Letras (MILTON TORRES) -
+									9412/9028</a></li>
+							<li><a href="#">Coordenação Pedagogia (BETANIA STANGE) -
+									9029</a></li>
+							<li><a href="#">Coordenação Estágios Pedagogia (LUCIANE
+									HEES) - 9538</a></li>
+							<li><a href="#">Coordenação de Comunicação Social
+									(MARTIN KUHN) - 9523/9076</a></li>
+							<li><a href="#">Coordenação de Educação Artística (ELLEN
+									B. STENCEL) - 9049</a></li>
+							<li><a href="#">Coordenação de Direito (CARLOS HEES) -
+									9056</a></li>
+							<li><a href="#">Secretaria Coordenação de Direito (KATIA
+									GODOI) - 9356</a></li>
+							<li><a href="#">Coordenação de Engenharia Civil (DÉBORA
+									PIERINI) - 9359/9059</a></li>
+							<li><a href="#">Empresa Junior Eng. Civil - 9592</a></li>
+							<li><a href="#">Coordenação de Administração (EVERSON
+									MUCKENBERGER) - 9088</a></li>
+							<li><a href="#">Secretaria Coordenação de Administração
+									(ELLEN MARILIN) - 9388</a></li>
+							<li><a href="#">Coordenação de Administração Estágios
+									(SÍLVIO DOBELIN) - 9584</a></li>
+							<li><a href="#">Coordenação de Ciências Contábeis
+									(WAGGNOOR) - 9030</a></li>
+							<li><a href="#">Consultoria JR. (CONTÁBEIS/ADM) - 9585</a></li>
+							<li><a href="#">Coordenação de Sistemas p/ Internet
+									(THALES CEZARE) - 9027/9327</a></li>
+							<li><a href="#">Coordenação de História (ELDER HOSOKAMA)
+									- 9043</a></li>
+							<li><a href="#">Apoio Acadêmico (JOSÉ CADIS) - 9089</a></li>
+							<li><a href="#">Apoio Acadêmico (CORREDOR) - 9527</a></li>
+							<li><a href="#">Central de Cópias (CEIÇA) - 9662</a></li>
+							<li><a href="#">Encadernação - 9545</a></li>
+							<li><a href="#">Cantina - 9308</a></li>
+							<li><a href="#">IDEC (PR. RODRIGO BERTOTTI) - 9542-9353</a></li>
+							<li><a href="#">Assessoria Jurídica (FILIPE PIAZZI) -
+									9472</a></li>
+							<li><a href="#">Secretaria (ILIDIA) - 9026</a></li>
+							<li><a href="#">Coord. Tradutor e Interprete (MILTON
+									TORRES) - 9622</a></li>
+							<li><a href="#">Coordenação de Arquitetura (VALQUÍRIA
+									SALLES) - 9084</a></li>
+							<li><a href="#">Secretaria Coordenação de ARQUITETURA -
+									9384</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class=" ui-block-a options">
+					<div data-role="collapsible" data-collapsed-icon="carat-d"
+						data-expanded-icon="carat-u">
+						<h3>Faculdade de Teologia</h3>
+						<ul data-role="listview" data-theme="c">
+							<li><a href="#">Diretor da Faculdade (EMILSON DOS REIS)
+									- 9022</a></li>
+							<li><a href="#">Secretaria Diretoria (ELLEN FESTA) -
+									9322</a></li>
+							<li><a href="#">Coordenação Curso de Teologia (REINALDO
+									SIQUEIRA) - 9054</a></li>
+							<li><a href="#">Secretaria Faculdade de Teologia
+									(NARIMAN) - 9052/9552</a></li>
+							<li><a href="#">Diretor de Pós-Graduação (ROBERTO
+									PEREYRA) - 9023</a></li>
+							<li><a href="#">Secretaria Diretor de Pós-Graduação
+									(DÉBORA) - 9053</a></li>
+							<li><a href="#">Convalidação (IVANY FERRO) - 9352</a></li>
+							<li><a href="#">Núcleo de Missões e Cresc. Igreja
+									(WOLTER) - 9422</a></li>
+							<li><a href="#">Sala dos Professores - 9544</a></li>
+							<li><a href="#">Monitoria - 9083</a></li>
+							<li><a href="#">AFAM (JANAÍNA) - 9597</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class=" ui-block-a options">
+					<div data-role="collapsible" data-collapsed-icon="carat-d"
+						data-expanded-icon="carat-u">
+						<h3>Educação Básica</h3>
+						<ul data-role="listview" data-theme="c">
+							<li><a href="#">Diretora (CARLA MARINA LOPES) - 9020</a></li>
+							<li><a href="#">COLÉGIO UNASP-EC (Central de
+									informações) - 9017</a></li>
+							<li><a href="#">Secretaria (MARIA LUCIA KETTLE) - 9018</a></li>
+							<li><a href="#"> FAX - Secretaria - 3858-9065</a></li>
+							<li><a href="#">Secretaria Geral (ROSANA) - 9417</a></li>
+							<li><a href="#">Monitoria e Central de Cópias (CELI) -
+									9320</a></li>
+							<li><a href="#">Coordenação de Pedagogia Ensino
+									Fundamental l (LUCY VIZOTTO) - 9085/9385</a></li>
+							<li><a href="#">Orient. Educ. do Ensino fundamental ll
+									(NÍVIA) - 9598/9086</a></li>
+							<li><a href="#">Coordenação de Pedagogia Ensino Médio
+									(FERNANDA) - 9041/9341</a></li>
+							<li><a href="#">Secr. Orientação Educacional (LÚCIA) -
+									9321/9021</a></li>
+							<li><a href="#">Coordenação Disciplina (ROBERTO) -
+									9067/9467</a></li>
+							<li><a href="#">Biblioteca (VANIA CANHADAS) - 9081</a></li>
+							<li><a href="#">Sala dos Professores - 9522</a></li>
+							<li><a href="#">Finanças Estudantis (ROBERTO) -
+									9620-9091</a></li>
+							<li><a href="#">Cantina - 9575</a></li>
+
+						</ul>
+					</div>
+				</div>
+
+				<div class=" ui-block-a options">
+					<div data-role="collapsible" data-collapsed-icon="carat-d"
+						data-expanded-icon="carat-u">
+						<h3>Produção Artística</h3>
+						<ul data-role="listview" data-theme="c">
+							<li><a href="#">Diretor (LINEU SOARES) - 9093</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class=" ui-block-a options">
+					<div data-role="collapsible" data-collapsed-icon="carat-d"
+						data-expanded-icon="carat-u">
+						<h3>Escola de Artes</h3>
+						<ul data-role="listview" data-theme="c">
+							<li><a href="#">Recepção - 9546</a></li>
+							<li><a href="#">Diretor (VANDIR SCHÄFFER) - 9031</a></li>
+							<li><a href="#">Secretária (CLAUDIA VIEIRA) - 9046</a></li>
+							<li><a href="#">Sala dos Professores - 9520</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class=" ui-block-a options">
+					<div data-role="collapsible" data-collapsed-icon="carat-d"
+						data-expanded-icon="carat-u">
+						<h3>Assuntos Estudantis</h3>
+						<ul data-role="listview" data-theme="c">
+							<li><a href="#">Coordenação Residencial Masculino (PR.
+									SÉRGIO) - 9444/9040</a></li>
+							<li><a href="#">Residencial masculino (RECEPÇÃO) -
+									9100/9557</a></li>
+							<li><a href="#">Coordenação Residencial Feminino (SARA)
+									- 9443-9042</a></li>
+							<li><a href="#">Residencial Feminino (RECEPÇÃO) -
+									9560/9200</a></li>
+							<li><a href="#">Fax - Residencial Feminino - 3858 9295</a></li>
+							<li><a href="#">Enfermaria (KELLY) - 9045</a></li>
+							<li><a href="#">Lavanderia - 9044</a></li>
+							<li><a href="#">Gerente Restaurante (GRANJEIRO) - 9553</a></li>
+							<li><a href="#">Secretaria Restaurante - 9039</a></li>
+							<li><a href="#">Restaurante/Nutricionista (GILZA) - 9539</a></li>
+							<li><a href="#">Recepção Restaurante - 9518</a></li>
+							<li><a href="#">Auditório Central - 9510</a></li>
+							<li><a href="#">Centro de Vivência (CÉLIA) - 9540</a></li>
+							<li><a href="#">Academia (EDUARDO) - 9660</a></li>
+							<li><a href="#">Ginásio de Esportes (MARCUS) - 9572/9486</a></li>
+							<li><a href="#">Piscinas - 9519</a></li>
+							<li><a href="#">Portaria - 9511/9309</a></li>
+							<li><a href="#">Canil - 9470</a></li>
+							<li><a href="#">Costureira - 9697</a></li>
+							<li><a href="#">Res. Feminino Capelania (LILIA PEREYRA)
+									- 9881</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class=" ui-block-a options">
+					<div data-role="collapsible" data-collapsed-icon="carat-d"
+						data-expanded-icon="carat-u">
+						<h3>Almoxarifado</h3>
+						<ul data-role="listview" data-theme="c">
+							<li><a href="#">Almoxarife (PAULO RAFAEL) - 9014</a></li>
+							<li><a href="#">Compras (DAURI/DONIZETE) - (Fax) 9015</a></li>
+							<li><a href="#">Compras (LÁZARO) - 9513</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class=" ui-block-a options">
+					<div data-role="collapsible" data-collapsed-icon="carat-d"
+						data-expanded-icon="carat-u">
+						<h3>Serviços</h3>
+						<ul data-role="listview" data-theme="c">
+
+							<li><a href="#">Arquiteto (ROLF LEROY MAIER) - 9068</a></li>
+							<li><a href="#">Engenharia Civil (SUZETE) - 9468</a></li>
+							<li><a href="#">Manutenção (TONINHO CARDOSO/MAURÍCIO) -
+									9071</a></li>
+							<li><a href="#">Construção (GUILHERME O. SANTOS) - 9063</a></li>
+							<li><a href="#">Marcenaria (SILAS MARQUES) - 9037 </a></li>
+							<li><a href="#">Serralheira (SEBASTIÃO DONIZETI) - 9573</a></li>
+							<li><a href="#">Agricultura (AMÓS NUNES) - 9057</a></li>
+							<li><a href="#">Horta (ERASMO ALMEIDA) - 9594</a></li>
+							<li><a href="#">Leiteria / Pecuária (PAULO) - 9318</a></li>
+							<li><a href="#">Paisagismo (MARGOT) - 9489</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class=" ui-block-a options">
+					<div data-role="collapsible" data-collapsed-icon="carat-d"
+						data-expanded-icon="carat-u">
+						<h3>Residências</h3>
+						<ul data-role="listview" data-theme="c">
+							<li><a href="#">PR. PAULO JOSÉ MARTINI - 9080</a></li>
+							<li><a href="#">AFONSO LIGÓRIO CARDOSO - 9069</a></li>
+							<li><a href="#">SAUL CESÁRIO FRANCA - 9087</a></li>
+							<li><a href="#">PR.RUI/ PROF. BETÂNIA - 9074</a></li>
+							<li><a href="#">PR. JOÃO XAVIER (Preceptor) - 9075</a></li>
+							<li><a href="#">FRASCISCO GRANJEIRO - 9317</a></li>
+							<li><a href="#">ANTÔNIO MARCOS PIRES (Segurança) - 9060</a></li>
+							<li><a href="#">GUILHERME O. SANTOS (Mestre de Obras) -
+									9315</a></li>
+							<li><a href="#">SILAS MARQUES (Gerente Marcenaria) -
+									9680</a></li>
+							<li><a href="#">WILSON (Marceneiro) - 9580</a></li>
+							<li><a href="#">LAURI MAGAIESKI (Motorista) - 9066</a></li>
+							<li><a href="#">RESIDÊNCIAS DA LEITERIA - 9564</a></li>
+							<li><a href="#">RESIDÊNCIAS FUNCIONÁRIOS (Arca) - 9306</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class=" ui-block-a options">
+					<div data-role="collapsible" data-collapsed-icon="carat-d"
+						data-expanded-icon="carat-u">
+						<h3>Outros</h3>
+						<ul data-role="listview" data-theme="c">
 
 
+							<li><a href="#">CAMPUS 1 - SP (11) 5822-8000/ 2128-6000</a></li>
+							<li><a href="#">CAMPUS 3 - HT (19) 2118-8000</a></li>
+							<li><a href="#">REITORIA MULTICAMP - 3858-5309/5305</a></li>
+							<li><a href="#">REITORIA (DAGMAR) Res. 3858-1060/
+									Cel.9288-0201</a></li>
+							<li><a href="#">BRADESCO UNASP (Daise) - 3858-1386 /
+									9686</a></li>
+							<li><a href="#">MERCEARIA - 3858-1024/1036</a></li>
+							<li><a href="#">CASA UNASP (JOSÉ GUIMARÃES) - (19) 3877
+									1329</a></li>
+							<li><a href="#">COLÉGIO UNASP ARTUR NOG. (19) 3877 9950</a></li>
 
-
-
-
-
-
-
-
-<ul>
-
-
-				<li style="background: none"><h3>
-						<a href="#" title="Centro de Comunicação">Centro de
-							Comunicação</a>
-					</h3></li>
-
-			
-
-
-
-				<li style="background: none"><h3>
-						<a href="#" title="Núcleo Multidisciplinar">Núcleo
-							Multidisciplinar</a>
-					</h3></li>
-
-				<li><a href="#">Recepção - 9536</a></li>
-				<li><a href="#">Assessoria Acadêmica (VALCENIR COSTA) -
-						9073</a></li>
-				<li><a href="#">Diretor GRI Brasil (NAHOR NEVES JR.) - 9051</a></li>
-				<li><a href="#">Coordenação de Pesquisa (FRANCISCA
-						PINHEIRO) - 9314</a></li>
-				<li><a href="#">Núcleo Jurídico (JOSÉ GUIMARÃES- 9050</a></li>
-				<li><a href="#">Agência Zoom ( Secretarias ) - 9047</a></li>
-				<li><a href="#">Agência Zoom (SUZAENY) - 9547</a></li>
-				<li><a href="#">Agencia de Jornalismo ABJ (LUIS FERNANDO) -
-						9072</a></li>
-				<li><a href="#">Unasp Virtual - 9090</a></li>
-				<li><a href="#">Agência zoom ( KENNY ) - 9481</a></li>
-				<li><a href="#">Agência zoom ( Fabiano ) - 9482</a></li>
-
-
-
-				<li style="background: none"><h3>
-						<a href="#" title="Educação Superior">Educação Superior</a>
-					</h3></li>
-
-				<li><a href="#">Recepção - 9099</a></li>
-				<li><a href="#">Fax - Secretaria Geral - 3858 9019</a></li>
-				<li><a href="#">Secretaria Geral (MARCELI MONTEIRO) -
-						9326/9532</a></li>
-				<li><a href="#">Secretaria Geral (BETH/LIDIA) - 9026</a></li>
-				<li><a href="#">Coordenação Pós-Graduação (ADRIANO COELHO)
-						- 9006</a></li>
-				<li><a href="#">Secretaria Coordenação Pós-graduação
-						(ÂNGELA ARRAIS) - 9543-9311</a></li>
-				<li><a href="#">Extensão Universitária (GAZETA) - 9077</a></li>
-				<li><a href="#">PROAD (ANA RIEN PEREZ) - 9062/9535</a></li>
-				<li><a href="#">Diretoria de Desenvolvimento Espiritual
-						(PR. EDSON ROMERO) - 9002/9302</a></li>
-				<li><a href="#">Diretório Acadêmico - 9542</a></li>
-				<li><a href="#">UNASPRESS (RENATO GROGER) - 9355/9055</a></li>
-				<li><a href="#">Central de Estágios (MIRIAM ALFIERI) - 9323</a></li>
-				<li><a href="#">Instituto de Línguas (PROF. ARIADNE) -
-						9316/9013</a></li>
-				<li><a href="#">Sala dos Professores - 9586</a></li>
-				<li><a href="#">Coordenação de Letras (MILTON TORRES) -
-						9412/9028</a></li>
-				<li><a href="#">Coordenação Pedagogia (BETANIA STANGE) -
-						9029</a></li>
-				<li><a href="#">Coordenação Estágios Pedagogia (LUCIANE
-						HEES) - 9538</a></li>
-				<li><a href="#">Coordenação de Comunicação Social (MARTIN
-						KUHN) - 9523/9076</a></li>
-				<li><a href="#">Coordenação de Educação Artística (ELLEN B.
-						STENCEL) - 9049</a></li>
-				<li><a href="#">Coordenação de Direito (CARLOS HEES) - 9056</a></li>
-				<li><a href="#">Secretaria Coordenação de Direito (KATIA
-						GODOI) - 9356</a></li>
-				<li><a href="#">Coordenação de Engenharia Civil (DÉBORA
-						PIERINI) - 9359/9059</a></li>
-				<li><a href="#">Empresa Junior Eng. Civil - 9592</a></li>
-				<li><a href="#">Coordenação de Administração (EVERSON
-						MUCKENBERGER) - 9088</a></li>
-				<li><a href="#">Secretaria Coordenação de Administração
-						(ELLEN MARILIN) - 9388</a></li>
-				<li><a href="#">Coordenação de Administração Estágios
-						(SÍLVIO DOBELIN) - 9584</a></li>
-				<li><a href="#">Coordenação de Ciências Contábeis
-						(WAGGNOOR) - 9030</a></li>
-				<li><a href="#">Consultoria JR. (CONTÁBEIS/ADM) - 9585</a></li>
-				<li><a href="#">Coordenação de Sistemas p/ Internet (THALES
-						CEZARE) - 9027/9327</a></li>
-				<li><a href="#">Coordenação de História (ELDER HOSOKAMA) -
-						9043</a></li>
-				<li><a href="#">Apoio Acadêmico (JOSÉ CADIS) - 9089</a></li>
-				<li><a href="#">Apoio Acadêmico (CORREDOR) - 9527</a></li>
-				<li><a href="#">Central de Cópias (CEIÇA) - 9662</a></li>
-				<li><a href="#">Encadernação - 9545</a></li>
-				<li><a href="#">Cantina - 9308</a></li>
-				<li><a href="#">IDEC (PR. RODRIGO BERTOTTI) - 9542-9353</a></li>
-				<li><a href="#">Assessoria Jurídica (FILIPE PIAZZI) - 9472</a></li>
-				<li><a href="#">Secretaria (ILIDIA) - 9026</a></li>
-				<li><a href="#">Coord. Tradutor e Interprete (MILTON
-						TORRES) - 9622</a></li>
-				<li><a href="#">Coordenação de Arquitetura (VALQUÍRIA
-						SALLES) - 9084</a></li>
-				<li><a href="#">Secretaria Coordenação de ARQUITETURA -
-						9384</a></li>
-
-
-
-				<li style="background: none"><h3>
-						<a href="#" title="Faculdade de Teologia">Faculdade de
-							Teologia</a>
-					</h3></li>
-
-				<li><a href="#">Diretor da Faculdade (EMILSON DOS REIS) -
-						9022</a></li>
-				<li><a href="#">Secretaria Diretoria (ELLEN FESTA) - 9322</a></li>
-				<li><a href="#">Coordenação Curso de Teologia (REINALDO
-						SIQUEIRA) - 9054</a></li>
-				<li><a href="#">Secretaria Faculdade de Teologia (NARIMAN)
-						- 9052/9552</a></li>
-				<li><a href="#">Diretor de Pós-Graduação (ROBERTO PEREYRA)
-						- 9023</a></li>
-				<li><a href="#">Secretaria Diretor de Pós-Graduação
-						(DÉBORA) - 9053</a></li>
-				<li><a href="#">Convalidação (IVANY FERRO) - 9352</a></li>
-				<li><a href="#">Núcleo de Missões e Cresc. Igreja (WOLTER)
-						- 9422</a></li>
-				<li><a href="#">Sala dos Professores - 9544</a></li>
-				<li><a href="#">Monitoria - 9083</a></li>
-				<li><a href="#">AFAM (JANAÍNA) - 9597</a></li>
-
-
-
-				<li style="background: none"><h3>
-						<a href="#" title="Educação Básica">Educação Básica</a>
-					</h3></li>
-
-				<li><a href="#">Diretora (CARLA MARINA LOPES) - 9020</a></li>
-				<li><a href="#">COLÉGIO UNASP-EC (Central de informações) -
-						9017</a></li>
-				<li><a href="#">Secretaria (MARIA LUCIA KETTLE) - 9018</a></li>
-				<li><a href="#"> FAX - Secretaria - 3858-9065</a></li>
-				<li><a href="#">Secretaria Geral (ROSANA) - 9417</a></li>
-				<li><a href="#">Monitoria e Central de Cópias (CELI) - 9320</a></li>
-				<li><a href="#">Coordenação de Pedagogia Ensino Fundamental
-						l (LUCY VIZOTTO) - 9085/9385</a></li>
-				<li><a href="#">Orient. Educ. do Ensino fundamental ll
-						(NÍVIA) - 9598/9086</a></li>
-				<li><a href="#">Coordenação de Pedagogia Ensino Médio
-						(FERNANDA) - 9041/9341</a></li>
-				<li><a href="#">Secr. Orientação Educacional (LÚCIA) -
-						9321/9021</a></li>
-				<li><a href="#">Coordenação Disciplina (ROBERTO) -
-						9067/9467</a></li>
-				<li><a href="#">Biblioteca (VANIA CANHADAS) - 9081</a></li>
-				<li><a href="#">Sala dos Professores - 9522</a></li>
-				<li><a href="#">Finanças Estudantis (ROBERTO) - 9620-9091</a></li>
-				<li><a href="#">Cantina - 9575</a></li>
-
-
-
-				<li style="background: none"><h3>
-						<a href="#" title="Produção Artística">Produção Artística</a>
-					</h3></li>
-
-				<li><a href="#">Diretor (LINEU SOARES) - 9093</a></li>
-
-
-
-				<li style="background: none"><h3>
-						<a href="#" title="Escola de Artes">Escola de Artes</a>
-					</h3></li>
-
-				<li><a href="#">Recepção - 9546</a></li>
-				<li><a href="#">Diretor (VANDIR SCHÄFFER) - 9031</a></li>
-				<li><a href="#">Secretária (CLAUDIA VIEIRA) - 9046</a></li>
-				<li><a href="#">Sala dos Professores - 9520</a></li>
-
-
-
-				<li style="background: none"><h3>
-						<a href="#" title="Assuntos Estudantis">Assuntos Estudantis</a>
-					</h3></li>
-
-				<li><a href="#">Coordenação Residencial Masculino (PR.
-						SÉRGIO) - 9444/9040</a></li>
-				<li><a href="#">Residencial masculino (RECEPÇÃO) -
-						9100/9557</a></li>
-				<li><a href="#">Coordenação Residencial Feminino (SARA) -
-						9443-9042</a></li>
-				<li><a href="#">Residencial Feminino (RECEPÇÃO) - 9560/9200</a></li>
-				<li><a href="#">Fax - Residencial Feminino - 3858 9295</a></li>
-				<li><a href="#">Enfermaria (KELLY) - 9045</a></li>
-				<li><a href="#">Lavanderia - 9044</a></li>
-				<li><a href="#">Gerente Restaurante (GRANJEIRO) - 9553</a></li>
-				<li><a href="#">Secretaria Restaurante - 9039</a></li>
-				<li><a href="#">Restaurante/Nutricionista (GILZA) - 9539</a></li>
-				<li><a href="#">Recepção Restaurante - 9518</a></li>
-				<li><a href="#">Auditório Central - 9510</a></li>
-				<li><a href="#">Centro de Vivência (CÉLIA) - 9540</a></li>
-				<li><a href="#">Academia (EDUARDO) - 9660</a></li>
-				<li><a href="#">Ginásio de Esportes (MARCUS) - 9572/9486</a></li>
-				<li><a href="#">Piscinas - 9519</a></li>
-				<li><a href="#">Portaria - 9511/9309</a></li>
-				<li><a href="#">Canil - 9470</a></li>
-				<li><a href="#">Costureira - 9697</a></li>
-				<li><a href="#">Res. Feminino Capelania (LILIA PEREYRA) -
-						9881</a></li>
-
-
-
-				<li style="background: none"><h3>
-						<a href="#" title="Almoxarifado">Almoxarifado</a>
-					</h3></li>
-
-				<li><a href="#">Almoxarife (PAULO RAFAEL) - 9014</a></li>
-				<li><a href="#">Compras (DAURI/DONIZETE) - (Fax) 9015</a></li>
-				<li><a href="#">Compras (LÁZARO) - 9513</a></li>
-
-
-
-				<li style="background: none"><h3>
-						<a href="#" title="Serviços">Serviços</a>
-					</h3></li>
-
-				<li><a href="#">Arquiteto (ROLF LEROY MAIER) - 9068</a></li>
-				<li><a href="#">Engenharia Civil (SUZETE) - 9468</a></li>
-				<li><a href="#">Manutenção (TONINHO CARDOSO/MAURÍCIO) -
-						9071</a></li>
-				<li><a href="#">Construção (GUILHERME O. SANTOS) - 9063</a></li>
-				<li><a href="#">Marcenaria (SILAS MARQUES) - 9037 </a></li>
-				<li><a href="#">Serralheira (SEBASTIÃO DONIZETI) - 9573</a></li>
-				<li><a href="#">Agricultura (AMÓS NUNES) - 9057</a></li>
-				<li><a href="#">Horta (ERASMO ALMEIDA) - 9594</a></li>
-				<li><a href="#">Leiteria / Pecuária (PAULO) - 9318</a></li>
-				<li><a href="#">Paisagismo (MARGOT) - 9489</a></li>
-
-
-
-				<li style="background: none"><h3>
-						<a href="#" title="Residências">Residências</a>
-					</h3></li>
-
-				<li><a href="#">PR. PAULO JOSÉ MARTINI - 9080</a></li>
-				<li><a href="#">AFONSO LIGÓRIO CARDOSO - 9069</a></li>
-				<li><a href="#">SAUL CESÁRIO FRANCA - 9087</a></li>
-				<li><a href="#">PR.RUI/ PROF. BETÂNIA - 9074</a></li>
-				<li><a href="#">PR. JOÃO XAVIER (Preceptor) - 9075</a></li>
-				<li><a href="#">FRASCISCO GRANJEIRO - 9317</a></li>
-				<li><a href="#">ANTÔNIO MARCOS PIRES (Segurança) - 9060</a></li>
-				<li><a href="#">GUILHERME O. SANTOS (Mestre de Obras) -
-						9315</a></li>
-				<li><a href="#">SILAS MARQUES (Gerente Marcenaria) - 9680</a></li>
-				<li><a href="#">WILSON (Marceneiro) - 9580</a></li>
-				<li><a href="#">LAURI MAGAIESKI (Motorista) - 9066</a></li>
-				<li><a href="#">RESIDÊNCIAS DA LEITERIA - 9564</a></li>
-				<li><a href="#">RESIDÊNCIAS FUNCIONÁRIOS (Arca) - 9306</a></li>
-
-
-
-				<li style="background: none"><h3>
-						<a href="#" title="Outros">Outros</a>
-					</h3></li>
-
-				<li><a href="#">CAMPUS 1 - SP (11) 5822-8000/ 2128-6000</a></li>
-				<li><a href="#">CAMPUS 3 - HT (19) 2118-8000</a></li>
-				<li><a href="#">REITORIA MULTICAMP - 3858-5309/5305</a></li>
-				<li><a href="#">REITORIA (DAGMAR) Res. 3858-1060/
-						Cel.9288-0201</a></li>
-				<li><a href="#">BRADESCO UNASP (Daise) - 3858-1386 / 9686</a></li>
-				<li><a href="#">MERCEARIA - 3858-1024/1036</a></li>
-				<li><a href="#">CASA UNASP (JOSÉ GUIMARÃES) - (19) 3877
-						1329</a></li>
-				<li><a href="#">COLÉGIO UNASP ARTUR NOG. (19) 3877 9950</a></li>
-
-
-
-				</ul>
+						</ul>
+					</div>
+				</div>
 
 			</div>
 		</div>

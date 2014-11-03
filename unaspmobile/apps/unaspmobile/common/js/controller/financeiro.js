@@ -74,12 +74,6 @@ function loadFinanceiro(ra,valor,ano){
 				}
 			}
 			
-	
-				
-			
-			
-
-			
 		}
 
 

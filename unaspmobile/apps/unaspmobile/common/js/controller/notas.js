@@ -115,6 +115,8 @@ function displayMedias(items){
 	mostra_detalhes_curso.html(table);
 	
 	$("#nome_curso_section").text(CURSO_NOME);
+	$('.cabecalho_cursos').css('display','block');
+	cabecalho_cursos
 
 //	teste = JSON.stringify(items[0].des_diciplina);
 //	alert(teste);
