@@ -47,7 +47,7 @@ unaspChallengeHandler.handleChallenge = function(response){
 $("#entrar").bind('click', function () {
 	var username = $("#user").val();
 	var password = $("#password").val();
-	
+	if(WL.Client.isConnected()){
 	if(username == "" && password == ""){
 		erroMessage('Preencha todos os dados','messages-alert');
 	}else{
@@ -70,12 +70,23 @@ $("#entrar").bind('click', function () {
 		});
 
 	}
+	}else
+	{
+		onConnectFailure();
+	}
 	return false;
 });
 
 //faz logout
 $(".bar").click(function(){
-	saiDaSessao();
+	
+	WL.SimpleDialog.show(
+			"Atenção!", "Deseja mesmo sair?.", 
+		
+			[
+			 {text: "NÃO", handler: function() {WL.Logger.debug("Saindo do sistema");WL.SimpleDialog.hide();} 
+			 },{text: "SIM", handler: function() {WL.Logger.debug("Saindo do sistema");saiDaSessao();} }]	
+	);
 	});
 
 

@@ -92,6 +92,15 @@ function loadAplication(texto){
 	},8000);
 }
 
+function logoutAplication(texto){
+	carregar(texto);
+	setTimeout(function(){
+		WL.App.close();	
+	},8000);
+}
+
+
+
 function carregar(texto){
 	$('#form').hide();
 	$('#footer-fixed').hide();
@@ -175,7 +184,7 @@ function saiDaSessao(){
 		
 		USERSESSION = null;
 		$.mobile.changePage("#login");
-		loadAplication("Saindo..");
+		logoutAplication("Saindo..");
 	
 	}});
 
@@ -201,6 +210,21 @@ function reset(){
 	$("#cabecalho_cursos").hide();
 	$("#mostra_detalhes_curso").hide();
 
+}
+
+function onConnectSuccess(){
+	WL.Logger("conexao estabelecida");
+	conected = true;
+}
+
+
+function onConnectFailure(){
+//	var busyInd = new WL.BusyIndicator('content', {text : "Erro ao conectar com o servidor..<button action=>'Sair()'</button>", boxLength: 255.5});
+//busyInd.show();
+	WL.SimpleDialog.show(
+			"ERRO!", "Erro ao conectar com o servidor! Verifique a sua conexão.", 
+			[{text: "Tente Novamente", handler: function() {WL.Logger.debug("First button pressed"); WL.Client.reloadApp();} }]
+		);
 }
 
 
