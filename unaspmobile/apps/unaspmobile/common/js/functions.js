@@ -26,10 +26,14 @@ function executaProcedure(pametros, adapter, procedure, sucess, failure){
 function resposive(){
 	// fixa o o titulo do header abaixo de header total
 	var valor = $("#header-menu").height();
-	var valor2 = $('.header-pages').height();
+
 	var valorTotal = valor * 2 - 83;
-	var valorfooter = $('#footer-fixed').height();
 	tamanho_login = $('.ui-mobile-viewport').height();
+	asdasd = $('.header-pages').height() + valor;
+
+	dfgdfgdfg = (tamanho_login -valorTotal) - 80;
+
+	
 	back_login_image = tamanho_login / 2.3;
 	
 	content = $('#conteudo-financeiro').css('height');
@@ -40,7 +44,7 @@ function resposive(){
 	$('.back-login img ').css('height',back_login_image);
 	$('.header-pages').css('margin-top',valor);
 	$('.content-unaspmobile ').css('margin-top',valorTotal);
-	
+	$('.content-unaspmobile ').css('max-height',dfgdfgdfg);
 
 	dsfsdfsdf = back_login_image - 70
 	$('.logo img').css('width',dsfsdfsdf);
@@ -103,8 +107,6 @@ function logoutAplication(texto){
 
 function carregar(texto){
 	$('#form').hide();
-	$('#footer-fixed').hide();
-	$('.bar').hide();
 	$(".loadMobile").fadeIn(3000);
 	$(".loadMobile h3").text(texto);
 	function mostradf(){
@@ -118,6 +120,7 @@ function carregado(){
 	$('#form').show();
 	$('#footer-fixed').show();
 	$('.bar').show();
+	$('.link-menu').show()
 	$(".loadMobile").hide(1000);
 }
 ///LOADING DE ENTRADA
@@ -130,11 +133,11 @@ function funcoesNecesarias(){
 	loadPerfil(USERSESSION.RA);
 	loadFinanceiro(USERSESSION.RA,'option','');
 	loadFinanceiro(USERSESSION.RA,'all','');
-	$("#header-menu").show();
 	active_menu('.botoes-menu li:eq(2)');
 	$('#footer-fixed').show();
 	$('.bar').show();
 	$.mobile.changePage("#perfil");
+	$("#header-menu").show();
 }
 
 
@@ -181,7 +184,10 @@ function erroMessage(texto,classe){
 // FAZ LOGOU NO SISTEMA
 function saiDaSessao(){
 	WL.Client.logout('UnaspRealm', {onSuccess:function(){
-		
+		$('#form').hide();
+		$('#header-menu').hide();
+		$('#footer-fixed');
+		$('.bar').hide();
 		USERSESSION = null;
 		$.mobile.changePage("#login");
 		logoutAplication("Saindo..");

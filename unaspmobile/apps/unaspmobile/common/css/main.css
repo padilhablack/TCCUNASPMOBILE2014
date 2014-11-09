@@ -38,6 +38,20 @@ body h3 {
 	border: 0px;
 }
 
+.ui-panel {
+width: 13em;
+min-height: 100%;
+max-height: none;
+border-width: 0;
+position: absolute;
+top: 0;
+display: block;
+}
+
+
+
+
+
 /*Loading Initial*/
 .loadMobile {
 	display: none;
@@ -73,19 +87,14 @@ body h3 {
 	max-height: 2.3em;
 }
 
-.back-login img {
-	margin: 0 auto;
-	width: 100%;
-	max-height: 512px;
-}
-
 .logo,.bar,.top-login {
 	margin: 0 auto;
 	width: 100%;
 	height: auto;
-	z-index: 9999;
-	position: absolute;
+	display: block;
 }
+
+
 
 .top-login {
 	margin: 2% auto;
@@ -113,9 +122,7 @@ body h3 {
 	text-shadow: 0px 3px 6px rgba(0, 0, 0, 1);
 }
 
-.logo {
-	bottom: -15px;
-}
+
 
 .logo img {
 	max-width: 300px;

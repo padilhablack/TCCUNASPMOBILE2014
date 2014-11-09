@@ -78,7 +78,7 @@ $("#entrar").bind('click', function () {
 });
 
 //faz logout
-$(".bar").click(function(){
+$(".sair").click(function(){
 	
 	WL.SimpleDialog.show(
 			"Atenção!", "Deseja mesmo sair?.", 
