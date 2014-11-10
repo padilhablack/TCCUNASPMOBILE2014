@@ -7,13 +7,14 @@
 
 var CURSO = "", ANO = "", TURMA = "", PERIODO = "" , DISCIPLINA = "", CURSO_NOME =""; // variaveis globais 
 
-$(document).on('pageinit',function(){
 	$('.cabecalho_cursos').hide();
 	
 	$("#periodo").attr('disabled', true);
 	$("#turma").attr('disabled', true);
 
 	$("#curso").bind("change",function(){
+	
+		
 		CURSO = parseInt($( this ).val());
 		loadPeriodo(USERSESSION.RA,CURSO);
 		habilita('periodo');
@@ -63,7 +64,7 @@ $(document).on('pageinit',function(){
 //	});
 
 
-})
+
 $("#faltas-menu").click(function(){
 	loadAulas(RA,CURSO,TURMA,PERIODO,DISCIPLINA);
 });

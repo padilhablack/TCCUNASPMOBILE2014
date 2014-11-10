@@ -3,15 +3,14 @@
 
 var path = "";// caminho padrão
 var USERSESSION; // variavel de sessão
-var busyIndicator = null; // icone de loading;
+var busy =  new WL.BusyIndicator('content', {text : 'Carregando...', boxLength: 255.5});
 var CURSO_NOME ="";
 var conected = false;
 
 //função inicial
 function wlCommonInit(){
-
-	verificaLogin();
 	resposive();
+	verificaLogin();
 	loadAplication("Carregando..");
 	
 	
@@ -23,11 +22,10 @@ function wlCommonInit(){
 	if (WL.Client.getEnvironment() == WL.Environment.WINDOWS_PHONE_8) {
 		path = "www/default/";
 	}
+
 }
 
-//
-//	// verifica se há conexão/
-//
+
 //	$(".children").on("swipeleft",function(){
 //		if($(this).attr('id') != login ){
 //			var nextpage = $(this).next('div[data-role="page"]');
@@ -36,7 +34,7 @@ function wlCommonInit(){
 //			link = "#link-"+ endereco;
 //			active_menu(link);
 //		}
-//		return false;
+//	
 //	});
 //
 //
@@ -49,14 +47,12 @@ function wlCommonInit(){
 //			link = "#link-"+ endereco;
 //			active_menu(link);
 //		}
-//		return false;
+//
 //	});
 
 	$('.botoes-menu li').click(function(){
 		active_menu(this);
 	});
-	
-
 	
 
 

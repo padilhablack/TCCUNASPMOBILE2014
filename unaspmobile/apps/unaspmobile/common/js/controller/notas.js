@@ -8,13 +8,16 @@
 
 /** PROCEDIMENTO PARA CARREGAR O PERIODO**/ 
 function loadPeriodo(ra,curso){
+	this.busy.show();
 	executaProcedure([ra,curso], 'StoreHTTP', 'retornaPeriodo', loadPeriodoSuccess, loadFailure);
 }
 function loadPeriodoSuccess(result){
+	if (busy.isVisible()) {
+		busy.hide();
+	};
 	if (result.invocationResult.array.length > 0) {
 		displayPeriodo(result.invocationResult.array);
-	}else 
-		loadFailure();	 
+	}	 
 }
 
 function displayPeriodo(items){
@@ -36,11 +39,14 @@ function displayPeriodo(items){
 /**TURMA**/ 
 
 function loadTurma(ra,curso,ano,periodo){
-
+	this.busy.show();
 	executaProcedure([ra,curso,ano,periodo], 'StoreHTTP', 'retornaTurma', loadTurmaSuccess, loadFailure);
 }
 //função de sucesso
 function loadTurmaSuccess(result){
+	if (busy.isVisible()) {
+		busy.hide();
+	};
 	if (result.invocationResult.array.length > 0) {
 		displayTurma(result.invocationResult.array);
 //		alert(result.invocationResult.array);
@@ -116,7 +122,6 @@ function displayMedias(items){
 	
 	$("#nome_curso_section").text(CURSO_NOME);
 	$('.cabecalho_cursos').css('display','block');
-	cabecalho_cursos
 
 //	teste = JSON.stringify(items[0].des_diciplina);
 //	alert(teste);
@@ -124,9 +129,9 @@ function displayMedias(items){
 
 
 function loadFailure(result){
-	rere = JSON.stringify(result);
-	WL.Logger('erro'+rere);
-
+	if (busy.isVisible()) {
+		busy.hide();
+	};
 }
 
 

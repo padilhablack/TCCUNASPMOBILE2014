@@ -1,6 +1,6 @@
 body {
 	margin: 0 auto;
-	overflow:hidden; 
+	overflow: hidden;
 }
 
 body h1 {
@@ -39,18 +39,14 @@ body h3 {
 }
 
 .ui-panel {
-width: 13em;
-min-height: 100%;
-max-height: none;
-border-width: 0;
-position: absolute;
-top: 0;
-display: block;
+	width: 13em;
+	min-height: 100%;
+	max-height: none;
+	border-width: 0;
+	position: absolute;
+	top: 0;
+	display: block;
 }
-
-
-
-
 
 /*Loading Initial*/
 .loadMobile {
@@ -65,16 +61,16 @@ display: block;
 	display: block;
 }
 
-.loading{
+.loading {
 	
 }
-#ajax-loader img{
-	display:block;
+
+#ajax-loader img {
+	display: block;
 	margin: 0 auto;
 	width: 70px;
-	height:auto !important;
+	height: auto !important;
 }
-
 
 #footer-fixed {
 	text-align: center;
@@ -93,8 +89,6 @@ display: block;
 	height: auto;
 	display: block;
 }
-
-
 
 .top-login {
 	margin: 2% auto;
@@ -121,8 +115,6 @@ display: block;
 	font-family: sans-serif;
 	text-shadow: 0px 3px 6px rgba(0, 0, 0, 1);
 }
-
-
 
 .logo img {
 	max-width: 300px;
@@ -263,6 +255,8 @@ display: block;
 	padding: 12px;
 }
 
+
+
 /* Tablet Portrait (768px) */
 @media only screen and (min-width: 321px) and (max-width: 1024px) and
 	(orientation: portrait) {
@@ -354,12 +348,12 @@ display: block;
 }
 
 /* Phone Portrait (320px) */
-@media only screen and (max-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width: 360px) and (orientation: portrait){
 	.top-login {
 		margin: 3% auto;
 	}
 	.bar a img {
-		width: 40px;
+		width: 70px;
 		height: auto;
 	}
 	.logo img {
@@ -387,9 +381,14 @@ display: block;
 	.ui-listview>.ui-li-static {
 		padding: 0.8em 1em;
 	}
-	.ui-listview > li h3{
-	font-size: 0.89em;
+	.ui-listview>li h3 {
+		font-size: 0.89em;
 	}
+	
+	#mostra_detalhes_curso{
+		font-size: 13px;
+	}
+
 }
 
 .effect {
@@ -421,4 +420,10 @@ display: block;
 
 .nav a:nth-child(4):hover ~ .effect {
 	left: 87.5%;
+}
+
+.ui-grid-solo > .ui-block-a {
+width: 100%;
+float: none;
+padding-bottom: 1px;
 }

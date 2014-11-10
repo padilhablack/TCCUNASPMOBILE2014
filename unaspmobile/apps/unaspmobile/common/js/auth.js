@@ -72,6 +72,7 @@ $("#entrar").bind('click', function () {
 	}
 	}else
 	{
+		carregado();
 		onConnectFailure();
 	}
 	return false;

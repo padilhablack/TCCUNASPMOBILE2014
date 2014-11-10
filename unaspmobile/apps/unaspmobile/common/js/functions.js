@@ -31,7 +31,7 @@ function resposive(){
 	tamanho_login = $('.ui-mobile-viewport').height();
 	asdasd = $('.header-pages').height() + valor;
 
-	dfgdfgdfg = (tamanho_login -valorTotal) - 80;
+	dfgdfgdfg = (tamanho_login -valorTotal) - 110;
 
 	
 	back_login_image = tamanho_login / 2.3;
@@ -73,6 +73,7 @@ function verificaLogin(){
 						EMAIL : useractive.email,
 						FOTO : useractive.foto
 				}
+				
 				funcoesNecesarias();
 		
 			}else{
@@ -107,6 +108,8 @@ function logoutAplication(texto){
 
 function carregar(texto){
 	$('#form').hide();
+		$('#footer-fixed').css('display','none');
+	$('.bar').hide();
 	$(".loadMobile").fadeIn(3000);
 	$(".loadMobile h3").text(texto);
 	function mostradf(){
@@ -118,9 +121,9 @@ function carregar(texto){
 
 function carregado(){
 	$('#form').show();
+	$('#footer-fixed').css('display','block');
 	$('#footer-fixed').show();
 	$('.bar').show();
-	$('.link-menu').show()
 	$(".loadMobile").hide(1000);
 }
 ///LOADING DE ENTRADA
@@ -186,7 +189,7 @@ function saiDaSessao(){
 	WL.Client.logout('UnaspRealm', {onSuccess:function(){
 		$('#form').hide();
 		$('#header-menu').hide();
-		$('#footer-fixed');
+		$('#footer-fixed').hide().css('background-color','#022b5b');
 		$('.bar').hide();
 		USERSESSION = null;
 		$.mobile.changePage("#login");
@@ -232,6 +235,8 @@ function onConnectFailure(){
 			[{text: "Tente Novamente", handler: function() {WL.Logger.debug("First button pressed"); WL.Client.reloadApp();} }]
 		);
 }
+
+
 
 
 
