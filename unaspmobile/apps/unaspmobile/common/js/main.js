@@ -18,10 +18,22 @@ function wlCommonInit(){
 		onSuccess: onConnectSuccess,
 		onFailure: onConnectFailure
 	}); 
-
+//	$.mobile.changePage('#notas');
+//	$('#header-menu').show();
+//	$('#footer-fixed').show();
+//	$('.seleciona_curso').hide();
+//	$('.cabecalho_cursos').hide();
+//	$('.mostra_detalhes_curso').hide();
+//	loadAvaliacoes(86539,800,2014,1,'5A800','G1311');
+$('.detalhe_disciplina').hide()
+$('.arrow-back').hide()
+	
 	if (WL.Client.getEnvironment() == WL.Environment.WINDOWS_PHONE_8) {
 		path = "www/default/";
 	}
+
+	
+	
 
 }
 
@@ -54,6 +66,8 @@ function wlCommonInit(){
 		active_menu(this);
 	});
 	
+	
+
 
 
 

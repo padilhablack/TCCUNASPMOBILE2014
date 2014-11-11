@@ -61,8 +61,16 @@ body h3 {
 	display: block;
 }
 
+
+
 .loading {
 	
+}
+#ajax-loader{
+width: 100%;
+display: block;
+
+position:fixed;
 }
 
 #ajax-loader img {
@@ -70,6 +78,7 @@ body h3 {
 	margin: 0 auto;
 	width: 70px;
 	height: auto !important;
+z-index: 99999999;
 }
 
 #footer-fixed {
@@ -295,7 +304,13 @@ body h3 {
 .campo_nota_titulo {
 	width: 60%;
 	text-align: left;
+	width: 60%;
+	text-align: left;
+	background-color: rgb(219, 219, 219);
+	border: 2px;
+	padding: 5px;
 }
+
 
 /* Laptop/Tablet (1024px) */
 @media only screen and (min-width: 481px) and (max-width: 1024px) and

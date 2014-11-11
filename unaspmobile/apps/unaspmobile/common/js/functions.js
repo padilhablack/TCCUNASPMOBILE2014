@@ -31,7 +31,7 @@ function resposive(){
 	tamanho_login = $('.ui-mobile-viewport').height();
 	asdasd = $('.header-pages').height() + valor;
 
-	dfgdfgdfg = (tamanho_login -valorTotal) - 110;
+	dfgdfgdfg = (tamanho_login -valorTotal) - 150;
 
 	
 	back_login_image = tamanho_login / 2.3;

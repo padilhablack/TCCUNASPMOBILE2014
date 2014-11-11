@@ -63,11 +63,13 @@ var CURSO = "", ANO = "", TURMA = "", PERIODO = "" , DISCIPLINA = "", CURSO_NOME
 //	return false;
 //	});
 
+	
 
 
 $("#faltas-menu").click(function(){
 	loadAulas(RA,CURSO,TURMA,PERIODO,DISCIPLINA);
 });
+
 
 
 

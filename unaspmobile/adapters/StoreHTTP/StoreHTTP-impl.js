@@ -51,12 +51,12 @@ function retornaDisciplina(ra,curso,ano,periodo,turma){
 
 
 
-function retornaAvaliacoes(ra,curso,ano,periodo,turma){
+function retornaAvaliacoes(ra,curso,ano,periodo,turma,disciplina){
 	// CHAMA A PROCEDURE
 	var input = {
 		    method : 'get',
 		    returnedContentType : 'json',
-		    path : '/unaspserver/notas/avaliacoes.php?ra='+ra+'&curso='+curso+'&ano='+ano+'&periodo='+periodo+'&turma='+turma
+		    path : '/unaspserver/notas/avaliacoes.php?ra='+ra+'&curso='+curso+'&ano='+ano+'&periodo='+periodo+'&turma='+turma+'&disciplina='+disciplina
 		};
 		
 	return WL.Server.invokeHttp(input);
